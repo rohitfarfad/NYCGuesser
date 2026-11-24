@@ -1,0 +1,40 @@
+# Large Kaggle images stay local; labels and submission schema are versioned.
+/Data/*
+!/Data/.gitkeep
+!/Data/train.csv
+!/Data/sample_submission.csv
+
+# Explicitly excluded from the repository.
+/Class Resources/
+/outputs/
+
+# Generated artifacts, environments and caches.
+/.venv*/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.DS_Store
+
+# Credentials and local configuration.
+.env
+.env.*
+!.env.example
+.kaggle/
+kaggle.json
+access_token
+cookies.txt
+*credentials*.json
+
+# Model artifacts and downloaded archives.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.tgz
