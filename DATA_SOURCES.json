@@ -1,0 +1,3596 @@
+{
+  "checked_at": "2026-11-14T12:06:06.667568-05:00",
+  "provenance": "User manually placed the official assignment and competition inputs. Extracted inputs and source filenames remain unchanged; the three source ZIPs were deleted on explicit user request after fresh manifest/size/SHA-256 verification.",
+  "course_folder_urls": {
+    "q1": "https://drive.google.com/drive/folders/1OLWKef8J9Lttg_olFg4eMrFt-aiJIbln",
+    "q2": "https://drive.google.com/drive/folders/1O1gImYeM71WA3LjqMzB067KEt6dx33VW",
+    "q3": "https://drive.google.com/drive/folders/178eaA3pCodmAUYJJDNIX1JNziPt-pcZ8"
+  },
+  "competition_archive_name": "nycguessr-cs-gy-6643-fall-26.zip",
+  "competition_invite": "https://www.kaggle.com/t/a4d2e74ef81d41aba4831cdc6e41d1ce",
+  "live_rules_verified": false,
+  "archives": [
+    {
+      "path": "Data/nycguessr-cs-gy-6643-fall-26.zip",
+      "bytes": 7245989598,
+      "sha256": "868ac975da08f8062b99fbf712b21eae6de802e5cc375c6954414fac26359393",
+      "extracted_files": 79090,
+      "extracted_bytes": 7288795318,
+      "crc_checked_during_extraction": true,
+      "present": false,
+      "deleted_at": "2026-11-14T12:09:29.470361-05:00",
+      "deletion_reason": "Explicit user request after verified extraction."
+    },
+    {
+      "path": "Q1 Data/drive-download-20261114T165235Z-1-001.zip",
+      "bytes": 181771,
+      "sha256": "ce446049ef4535ebfa0665b9561b23cf140da96c577a323c02fe5af90118dcb6",
+      "extracted_files": 6,
+      "extracted_bytes": 180660,
+      "crc_checked_during_extraction": true,
+      "present": false,
+      "deleted_at": "2026-11-14T12:09:29.470361-05:00",
+      "deletion_reason": "Explicit user request after verified extraction."
+    },
+    {
+      "path": "Q3 Data/q3-20261114T165550Z-1-001.zip",
+      "bytes": 13260351,
+      "sha256": "131354c4f8b1faa97f85d08ed2a001953ef6ffbd5621d9ad96df27ccd038074a",
+      "extracted_files": 64,
+      "extracted_bytes": 13245241,
+      "crc_checked_during_extraction": true,
+      "present": false,
+      "deleted_at": "2026-11-14T12:09:29.470361-05:00",
+      "deletion_reason": "Explicit user request after verified extraction."
+    }
+  ],
+  "q2_original_files": [
+    {
+      "path": "Q2 Data/astronaut_noisy.png",
+      "bytes": 749118,
+      "sha256": "4bf16a54805c3a77d7790695d19a2c614d8c2f0c714789fd1cb9fe48250aa74f",
+      "origin": "user_placed_official_Q2_input"
+    },
+    {
+      "path": "Q2 Data/cat_noisy.png",
+      "bytes": 449041,
+      "sha256": "fa858a68871a0b1caf7241aba9a641169b680b8be504ff3d63a685eb104715c4",
+      "origin": "user_placed_official_Q2_input"
+    },
+    {
+      "path": "Q2 Data/coffee_noisy.png",
+      "bytes": 744086,
+      "sha256": "8026cd5d47f01780d18ed111476da33d5614a4d181d44e7f2556a1a68d664f36",
+      "origin": "user_placed_official_Q2_input"
+    }
+  ],
+  "q1": {
+    "root": "Q1 Data",
+    "pairs": 3,
+    "image_size": [
+      224,
+      224
+    ],
+    "patch_size": [
+      16,
+      16
+    ],
+    "missing_patches_per_image": 98,
+    "total_patches_per_image": 196,
+    "mask_values": {
+      "0": "visible",
+      "255": "missing"
+    },
+    "masked_rgb": [
+      150,
+      150,
+      150
+    ]
+  },
+  "q2": {
+    "root": "Q2 Data",
+    "images": 3,
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB",
+    "clean_references_supplied": false
+  },
+  "q3": {
+    "root": "Q3 Data/q3",
+    "pairs": 32,
+    "scene_size": [
+      800,
+      600
+    ],
+    "reference_size": [
+      128,
+      128
+    ],
+    "unique_decoded_scene_images": 16,
+    "unique_decoded_reference_images": 8,
+    "retain_all_32_pairs": true,
+    "ground_truth_boxes_or_absence_labels_supplied": false
+  },
+  "q4": {
+    "train_csv": "Data/train.csv",
+    "sample_submission_csv": "Data/sample_submission.csv",
+    "train_columns": [
+      "sample_id",
+      "image_north",
+      "image_east",
+      "image_south",
+      "image_west",
+      "borough",
+      "latitude",
+      "longitude"
+    ],
+    "submission_columns": [
+      "sample_id",
+      "borough",
+      "latitude",
+      "longitude"
+    ],
+    "splits": {
+      "train": {
+        "samples": 11864,
+        "images": 47456,
+        "all_four_view_groups_complete": true,
+        "borough_counts": {
+          "Queens": 4658,
+          "Bronx": 1766,
+          "Brooklyn": 2822,
+          "Manhattan": 1782,
+          "Staten Island": 836
+        },
+        "unique_coordinate_pairs": 11864,
+        "labels_available": true
+      },
+      "test": {
+        "samples": 7908,
+        "images": 31632,
+        "all_four_view_groups_complete": true,
+        "template_placeholder_borough_counts": {
+          "Queens": 7908
+        },
+        "template_placeholder_unique_coordinate_pairs": 1,
+        "labels_available": false
+      }
+    },
+    "training_coordinate_ranges": {
+      "latitude_deg": [
+        40.4988289,
+        40.9120521
+      ],
+      "longitude_deg": [
+        -74.2544099,
+        -73.7006998
+      ]
+    },
+    "borough_summaries": {
+      "Bronx": {
+        "samples": 1766,
+        "latitude_range_deg": [
+          40.7979665,
+          40.9120521
+        ],
+        "longitude_range_deg": [
+          -73.9326887,
+          -73.7818254
+        ]
+      },
+      "Brooklyn": {
+        "samples": 2822,
+        "latitude_range_deg": [
+          40.5715921,
+          40.738678
+        ],
+        "longitude_range_deg": [
+          -74.0402069,
+          -73.8601126
+        ]
+      },
+      "Manhattan": {
+        "samples": 1782,
+        "latitude_range_deg": [
+          40.7009489,
+          40.8788145
+        ],
+        "longitude_range_deg": [
+          -74.0185926,
+          -73.9110446
+        ]
+      },
+      "Queens": {
+        "samples": 4658,
+        "latitude_range_deg": [
+          40.5581175,
+          40.8006615
+        ],
+        "longitude_range_deg": [
+          -73.9615621,
+          -73.7006998
+        ]
+      },
+      "Staten Island": {
+        "samples": 836,
+        "latitude_range_deg": [
+          40.4988289,
+          40.6479486
+        ],
+        "longitude_range_deg": [
+          -74.2544099,
+          -74.056815
+        ]
+      }
+    },
+    "duplicate_training_coordinate_groups": 0,
+    "training_rows_in_duplicate_coordinate_groups": 0,
+    "nearest_other_training_location_m": {
+      "quantiles": {
+        "min": 99.879490709112,
+        "p10": 99.88386140778329,
+        "median": 99.88742827475943,
+        "p90": 141.60017423919746,
+        "max": 1498.3209189570198
+      },
+      "within_10m": 0,
+      "within_50m": 0,
+      "within_100m": 9198,
+      "earth_radius_m_local_descriptive_choice": 6371008.8
+    },
+    "sample_submission_unique_values": {
+      "borough": [
+        "Queens"
+      ],
+      "latitude": [
+        "40.720977"
+      ],
+      "longitude": [
+        "-73.907026"
+      ]
+    },
+    "sample_submission_is_template_not_ground_truth": true,
+    "numeric_ids_overlap_between_train_and_test": true,
+    "split_identity_rule": "Use split plus sample_id; equal numeric IDs across splits identify different inputs.",
+    "packaged_rules_readme_or_scorer": null
+  },
+  "integrity": {
+    "all_archives_crc_checked": true,
+    "all_original_archive_hashes_rechecked": true,
+    "all_image_file_hashes_verified": true,
+    "fully_decoded_images": 79161,
+    "decode_errors": 0,
+    "exact_duplicate_kaggle_image_groups": 0,
+    "q3_decoded_pixel_duplicate_groups": [
+      [
+        "Q3 Data/q3/eval_008/scene.png",
+        "Q3 Data/q3/eval_007/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_022/scene.png",
+        "Q3 Data/q3/eval_021/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_002/scene.png",
+        "Q3 Data/q3/eval_001/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_003/scene.png",
+        "Q3 Data/q3/eval_004/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_024/scene.png",
+        "Q3 Data/q3/eval_023/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_032/scene.png",
+        "Q3 Data/q3/eval_031/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_005/scene.png",
+        "Q3 Data/q3/eval_006/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_014/reference.png",
+        "Q3 Data/q3/eval_026/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_025/scene.png",
+        "Q3 Data/q3/eval_026/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_012/scene.png",
+        "Q3 Data/q3/eval_011/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_009/scene.png",
+        "Q3 Data/q3/eval_010/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_029/scene.png",
+        "Q3 Data/q3/eval_030/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_013/reference.png",
+        "Q3 Data/q3/eval_031/reference.png",
+        "Q3 Data/q3/eval_006/reference.png",
+        "Q3 Data/q3/eval_015/reference.png",
+        "Q3 Data/q3/eval_029/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_013/scene.png",
+        "Q3 Data/q3/eval_014/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_018/scene.png",
+        "Q3 Data/q3/eval_017/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_027/scene.png",
+        "Q3 Data/q3/eval_028/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_015/scene.png",
+        "Q3 Data/q3/eval_016/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_008/reference.png",
+        "Q3 Data/q3/eval_003/reference.png",
+        "Q3 Data/q3/eval_022/reference.png",
+        "Q3 Data/q3/eval_001/reference.png",
+        "Q3 Data/q3/eval_012/reference.png",
+        "Q3 Data/q3/eval_019/reference.png",
+        "Q3 Data/q3/eval_017/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_020/scene.png",
+        "Q3 Data/q3/eval_019/scene.png"
+      ],
+      [
+        "Q3 Data/q3/eval_025/reference.png",
+        "Q3 Data/q3/eval_020/reference.png",
+        "Q3 Data/q3/eval_009/reference.png",
+        "Q3 Data/q3/eval_027/reference.png",
+        "Q3 Data/q3/eval_011/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_004/reference.png",
+        "Q3 Data/q3/eval_005/reference.png",
+        "Q3 Data/q3/eval_010/reference.png",
+        "Q3 Data/q3/eval_007/reference.png",
+        "Q3 Data/q3/eval_023/reference.png",
+        "Q3 Data/q3/eval_021/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_032/reference.png",
+        "Q3 Data/q3/eval_024/reference.png",
+        "Q3 Data/q3/eval_028/reference.png",
+        "Q3 Data/q3/eval_016/reference.png"
+      ],
+      [
+        "Q3 Data/q3/eval_002/reference.png",
+        "Q3 Data/q3/eval_018/reference.png"
+      ]
+    ],
+    "near_duplicate_imagery_audited": false
+  },
+  "artifacts": {
+    "extraction_report": "outputs/data_extraction.json",
+    "raw_file_manifest": "outputs/input_manifest.jsonl",
+    "raw_file_manifest_sha256": "e878c8ce10ce2032c4790184e0344fbf6bd95a3ad206fe45f7a8b39671610d7a",
+    "per_image_decode_report": "outputs/image_audit.jsonl",
+    "data_audit": "outputs/data_audit.json",
+    "original_integrity_checks": "outputs/integrity_verification.json",
+    "archive_cleanup": "outputs/archive_cleanup.json"
+  },
+  "reproduce_audit": {
+    "command": "python3 -B audit_data.py",
+    "audit_source_sha256": "36cbf9595d18c78044e61d7b4cd96b4f7739983fff89b6fe0b3fb1715f56fed1",
+    "python": "3.12.6",
+    "packages": {
+      "Pillow": "12.2.0",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1"
+    },
+    "image_decode_workers": 2
+  },
+  "measured_runtime_seconds": {
+    "extraction": 34.11,
+    "audit": 76.57
+  },
+  "open_questions": [
+    "Live Kaggle rules, final selection limit and deadline time zone remain unverified.",
+    "No executable official scorer or packaged rules/README is present.",
+    "Haversine Earth radius and unspecified metric edge cases require reconciliation.",
+    "The pHash near-duplicate check is heuristic; residual visual/geographic dependence remains possible.",
+    "Torch course Slurm project account/allocation is missing; remote environment and data staging are incomplete."
+  ],
+  "model_training_performed": true,
+  "predictions_generated": true,
+  "kaggle_submission_performed": false,
+  "archive_cleanup": {
+    "status": "complete",
+    "verified_at": "2026-11-14T12:09:27.395629-05:00",
+    "completed_at": "2026-11-14T12:09:29.470361-05:00",
+    "verified_raw_files": 79163,
+    "verified_raw_bytes": 7304163464,
+    "deleted_archive_bytes": 7259431720,
+    "all_manifested_raw_files_still_present": true
+  },
+  "prediction_scope": "Held-out validation diagnostics and 7,908 final test predictions; local Kaggle CSV ready, not uploaded.",
+  "modeling": {
+    "notebook": "NYCGuessr.ipynb",
+    "code_policy": "All active Kaggle solution code and tests are inline in the notebook; no external project Python imports.",
+    "split_file": "outputs/splits.json",
+    "experiment_log": "outputs/experiment_log.jsonl",
+    "baseline_metrics": "outputs/baseline_metrics.csv",
+    "representative_train_locations": 9492,
+    "representative_validation_locations": 2372,
+    "spatial_train_locations": 8716,
+    "spatial_validation_locations": 2421,
+    "spatial_excluded_buffer_locations": 727,
+    "pretrained_weights_used": true,
+    "hpc_status": "outputs/hpc_status.json",
+    "current_status": "Spatial target still unmet. Best experimental pooled-gate spatial5.212053/5.234967km, versus production hybrid5.460754/5.574773. Production/CSV unchanged; new public result unknown.",
+    "inline_tests_passed": 38,
+    "executed_code_cells": 42,
+    "notebook_error_outputs": 0,
+    "target_score": 0.8,
+    "target_achieved": false,
+    "public_leaderboard_score": null,
+    "best_control": {
+      "model": "rgb_ridge",
+      "representative": {
+        "score": 0.03686752317042973,
+        "borough_macro_f1": 0.3686752317042973,
+        "gps_score": 0.0,
+        "mean_km": 10.453832184290606
+      },
+      "spatial": {
+        "score": 0.03486867896268007,
+        "borough_macro_f1": 0.34868678962680066,
+        "gps_score": 0.0,
+        "mean_km": 10.525986217779147
+      }
+    },
+    "notebook_verification": "outputs/notebook_submission_final_verification.json",
+    "local_continuation": {
+      "run_id": "20261114T143039_cnn_representative_local2048",
+      "training_locations": 2048,
+      "validation_locations": 2372,
+      "batch_locations": 8,
+      "image_size": 128,
+      "completed_epochs": 11,
+      "training_cap_minutes": 8,
+      "best_head_epoch": 10,
+      "head_metrics": {
+        "score": 0.03247033701600391,
+        "borough_macro_f1": 0.3247033701600391,
+        "gps_score": 0.0,
+        "mean_km": 10.421209492259916
+      },
+      "matched_rgb_ridge_metrics": {
+        "score": 0.03521342871617957,
+        "borough_macro_f1": 0.35213428716179573,
+        "gps_score": 0.0,
+        "mean_km": 10.914229807649289
+      },
+      "ready_for_refit": false,
+      "training_run_verification": "outputs/notebook_local_continuation_verification.json",
+      "calibration_verification": "outputs/notebook_local_calibration_verification.json",
+      "tiny_fit_verification": "outputs/notebook_tiny_fit_verification.json",
+      "tiny_fit_scope": "40 training locations only; memorization is not validation or leaderboard evidence."
+    },
+    "best_development_method": {
+      "model": "fusion_plus_hybrid_meta_decoded_reranker",
+      "metric_version": "mean_haversine_5km_v2",
+      "primary_seed": 6643,
+      "decision": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/decision.json",
+      "decision_sha256": "1dbc8cabad4e6f5c3cfb02a899961dd6724dfee614eea48c9a6b0b76f2ae9747",
+      "primary_results": {
+        "representative": {
+          "method": "hybrid_meta",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.3657949464671101,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.313303587305805,
+          "mean_km": 3.4334820634709753,
+          "median_km": 1.1182499799430181,
+          "p90_km": 9.963252446208543,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.672673074870382
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.3878860663501396
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 2.074357204645164
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 3.1231150960467238
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.597507085827573
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6643/validation_hybrid_meta.csv",
+          "prediction_sha256": "2953289dc519e3dea430fef04c4c260a649ba867eddf8cd9bb38a5942f8cc7ff",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6643/reranker.pth",
+          "checkpoint_sha256": "8add6fc61f749bc9095f1a87ce67650c6cab80b951c5b384fbb4313ea583c1f5",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+          "source_checkpoint_sha256": "b684e7d4ee3c7dddfc874007672584346b9d9042d14ed887789703beace5900e",
+          "fraction_over_5km": 0.18043844856661045,
+          "fraction_over_10km": 0.09991568296795952,
+          "fraction_over_20km": 0.02824620573355818,
+          "worst_decile_error_share": 0.5383920540437,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0059657883954852995,
+              0.03152016388342922
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.03314326886380662,
+              0.17511202157460637
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        "spatial": {
+          "method": "hybrid_meta",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.460753996424515,
+          "median_km": 2.7056363891759423,
+          "p90_km": 13.858874359907109,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.3873614676034185
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.741847391551319
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.664273465719351
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 5.168983084088912
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 11.206914986228185
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6643/validation_hybrid_meta.csv",
+          "prediction_sha256": "98923ab2e66528f1fa36babcac9196fb075b3e136a951c207f13fc0204fb7395",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6643/reranker.pth",
+          "checkpoint_sha256": "c4ae3049ccafa80319dd11cc17748bf4f45e16c6749d7c899b067b69f33a2549",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6643/best.pth",
+          "source_checkpoint_sha256": "ec264530b5005233b7901821befe05a6ffa0e3af920be49e7fe77a8f477d925f",
+          "fraction_over_5km": 0.33911606774060304,
+          "fraction_over_10km": 0.15613382899628253,
+          "fraction_over_20km": 0.050392399834779014,
+          "worst_decile_error_share": 0.4161915198380829,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.0073510324497681415
+            ],
+            "mean_error_reduction_km_interval_95": [
+              -0.01314632655422187,
+              0.13593991825472346
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        }
+      },
+      "matched_seed_results": {
+        "representative": {
+          "method": "hybrid_meta",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.3852741384024441,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.3350501763156324,
+          "mean_km": 3.324749118421838,
+          "median_km": 1.080157645365214,
+          "p90_km": 9.510875588428597,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.32417389300257
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.226098668759861
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.1445930186603994
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 2.9849288388615087
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 5.957623251641328
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6644/validation_hybrid_meta.csv",
+          "prediction_sha256": "e07e98d55da06100a24787168dba1615a11defa64263e83fc5795035c19cfad4",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6644/reranker.pth",
+          "checkpoint_sha256": "854ff24dfce45955d51fb61142be5bdb7593f55f9dfaedab9f4a18e1a61e4873",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6644/best.pth",
+          "source_checkpoint_sha256": "12fd81c3a16485a207cbde9acf885670189aa37b366b3e3bcc12bec717f62e5f",
+          "fraction_over_5km": 0.18465430016863407,
+          "fraction_over_10km": 0.09401349072512648,
+          "fraction_over_20km": 0.026559865092748734,
+          "worst_decile_error_share": 0.5370501638254903,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.020757549228751688,
+              0.05043636004585213
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.11531971793750914,
+              0.28020200025473385
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        "spatial": {
+          "method": "hybrid_meta",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.574772562749687,
+          "median_km": 2.8084531069190826,
+          "p90_km": 14.08525005554701,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.262426212445445
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 4.9791692542857104
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.866544064882588
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 5.373557627156702
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.728046933580295
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6644/validation_hybrid_meta.csv",
+          "prediction_sha256": "6ddae4a6281f28246ffa1e9e547d1a0d5ca9f3dfab09dae3183eb5c97d225e98",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6644/reranker.pth",
+          "checkpoint_sha256": "02835158afdb444b2379706f6bb87df8b45af374b1ade257312dedd454def139",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6644/best.pth",
+          "source_checkpoint_sha256": "34fa2483ee88901430b84d5044a4066d25bde864e5471350ed68c703016147ea",
+          "fraction_over_5km": 0.34613795952085913,
+          "fraction_over_10km": 0.16191656340355226,
+          "fraction_over_20km": 0.048740190004130525,
+          "worst_decile_error_share": 0.4089040199270883,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.0
+            ],
+            "mean_error_reduction_km_interval_95": [
+              -0.015039329828276627,
+              0.16881184722638226
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        }
+      },
+      "source_encoders_frozen": true,
+      "public_leaderboard_score": null,
+      "selection_scope": "Reused development, predeclared two-fold/two-seed point-estimate guard; spatial intervals cross zero."
+    },
+    "previous_best_development_method": {
+      "model": "fusion_random",
+      "metric_version": "mean_haversine_5km_v2",
+      "scores": {
+        "representative": 0.3460039404905524,
+        "spatial": 0.0772372445757082
+      },
+      "public_result": {
+        "score": 0.42,
+        "approximate": true,
+        "source": "user_report",
+        "reported_date": "2026-11-18",
+        "metric_version": "mean_haversine_5km_v2",
+        "model": "fusion_random",
+        "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+        "csvs": [
+          "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+          "Kaggle Submissions/nycguessr_fusion40_20261118.csv"
+        ],
+        "live_kaggle_verified": false
+      }
+    },
+    "imagenet_transfer": {
+      "metrics_file": "outputs/imagenet_transfer_metrics.csv",
+      "selective_metrics_file": "outputs/imagenet_selective_metrics.csv",
+      "feature_cache_file": "outputs/features/imagenet_resnet18_train_983a9bc62b2d4626.npy",
+      "feature_cache_sha256": "9b11733d713a08e3a20d709c9d6c41e86a42a9dad4ff71d6087b4ec284e4d089",
+      "feature_cache_bytes": 97190016,
+      "feature_extraction_seconds": 168.91223524999805,
+      "cached_experiment_rerun_seconds": 22.12,
+      "representative_head_seconds": 9.702329833991826,
+      "spatial_head_seconds": 6.727902000071481,
+      "spatial_metrics": {
+        "score": 0.1103061377934917,
+        "borough_macro_f1": 0.4764619767407147,
+        "gps_score": 0.0696221556882447,
+        "mean_km": 9.303778443117553,
+        "median_km": 7.844329830069047,
+        "p90_km": 18.093707916909576
+      },
+      "spatial_heads_fit_independently": true,
+      "backbone_selective_finetuning_performed": true,
+      "selective_finetuning_retained": false,
+      "final_transfer_refit_performed": false,
+      "test_feature_extraction_performed": false,
+      "final_refit_test_scope": "100-location synthetic fixture only"
+    },
+    "streetclip_comparison": {
+      "date": "2026-11-16",
+      "status": "measured_candidate_retained",
+      "scope": "matched reduced training; complete fixed validation sets",
+      "training_locations": {
+        "representative": 4128,
+        "spatial": 3926
+      },
+      "validation_locations": {
+        "representative": 2372,
+        "spatial": 2421
+      },
+      "epochs": 20,
+      "metrics_file": "outputs/streetclip_comparison_metrics.csv",
+      "audit_file": "outputs/streetclip_artifact_audit.json",
+      "extraction_limit_seconds": 3600,
+      "extraction_used_seconds": 2755.870640582987,
+      "all_label_streetclip_fit_performed": false,
+      "test_inference_performed": false,
+      "kaggle_submission_performed": false
+    },
+    "streetclip_full20": {
+      "date": "2026-11-16",
+      "status": "historical_validated_baseline_preserved",
+      "metrics_file": "outputs/streetclip_full20_metrics.csv",
+      "audit_file": "outputs/streetclip_full20_artifact_audit.json",
+      "training_locations": {
+        "representative": 9492,
+        "spatial": 8716
+      },
+      "epochs": 20,
+      "completion_phase_seconds": 2355.105243582977,
+      "completion_phase_limit_seconds": 3600,
+      "all_label_supervised_refit_performed": false,
+      "test_inference_performed": false,
+      "kaggle_submission_performed": false
+    },
+    "historical_best_development_methods": [
+      {
+        "model": "four_view_cnn_head",
+        "run_id": "20261114T153649_cnn_representative_warm",
+        "split": "representative",
+        "training_locations": 9492,
+        "validation_locations": 2372,
+        "epoch": 6,
+        "initialization": "competition-trained subset checkpoint; geometry frozen",
+        "metrics": {
+          "score": 0.04623900020423307,
+          "borough_macro_f1": 0.3818545630003789,
+          "gps_score": 0.008948382115772424,
+          "mean_km": 9.910516178842276,
+          "median_km": 8.311724716550543,
+          "p90_km": 18.242997988018313
+        },
+        "checkpoint": "outputs/runs/20261114T153649_cnn_representative_warm/best.pth",
+        "checkpoint_sha256": "4bad603af347d4dad02cb78fb282b95c50ed50bcf726813e116f5dc4567a7c07",
+        "selection": "outputs/runs/20261114T153649_cnn_representative_warm/selection.json",
+        "training_cap_minutes": 15,
+        "completed_epochs": 7,
+        "training_verification": "outputs/notebook_more_data_training_verification.json",
+        "calibration_verification": "outputs/notebook_more_data_calibration_verification.json",
+        "spatial_model_evaluation_performed": false,
+        "public_leaderboard_score": null
+      },
+      {
+        "model": "imagenet_frozen_head",
+        "run_id": "20261114T165241_imagenet_head_representative",
+        "split": "representative",
+        "training_locations": 9492,
+        "validation_locations": 2372,
+        "epoch": 7,
+        "metrics": {
+          "score": 0.1256768221515843,
+          "borough_macro_f1": 0.503439890393195,
+          "gps_score": 0.08370314790251643,
+          "mean_km": 9.162968520974836,
+          "median_km": 7.228681719660482,
+          "p90_km": 18.94063843309725
+        },
+        "checkpoint": "outputs/runs/20261114T165241_imagenet_head_representative/best.pth",
+        "checkpoint_sha256": "0642a08dfe2bc598612a1f69dff663d10f34e3cd8855052a2c0685045f9ef4f7",
+        "weights_origin": "allowed_imagenet1k_backbone_competition_training_head",
+        "encoder_frozen": true,
+        "public_leaderboard_score": null
+      },
+      {
+        "model": "frozen_streetclip_compass_long40",
+        "run_id": "20261116T165854_compass_normfix_tau10_long40_representative",
+        "split": "representative",
+        "training_locations": 9492,
+        "validation_locations": 2372,
+        "epoch": 40,
+        "completed_epochs": 40,
+        "target_temperature_km": 1.0,
+        "metrics": {
+          "score": 0.5826461040287263,
+          "borough_macro_f1": 0.7999508873409782,
+          "gps_score": 0.5585011281051427,
+          "mean_km": 4.414988718948573,
+          "median_km": 1.874957342633484,
+          "p90_km": 12.469612040446872
+        },
+        "checkpoint": "outputs/runs/20261116T165854_compass_normfix_tau10_long40_representative/best.pth",
+        "checkpoint_sha256": "b81144fcaf8aac8467ffe7074401b16403eacd6aa8db63169f15eb891e6ecd10",
+        "encoder_frozen": true,
+        "public_leaderboard_score": null
+      }
+    ],
+    "cached_geo_studies": {
+      "date": "2026-11-16",
+      "borough_weighting_retained": false,
+      "sharper_targets_retained": false,
+      "normalization_training": "explicit_biased_variance_v1; CPU/MPS reference parity passed; native evaluation retained",
+      "numerical_root_cause_proven": false,
+      "successful_head_fit_seconds": 217.7945924170781,
+      "head_training_allowance_seconds": 600,
+      "initial_failed_fit_elapsed_seconds": null,
+      "failed_run_ids": [
+        "20261116T164409_compass_streetclip_tau05_20_representative",
+        "20261116T165309_compass_streetclip_tau10_repeat_representative"
+      ],
+      "audit_file": "outputs/cached_geo_study_artifact_audit.json",
+      "comparison_metrics": "outputs/cached_geo_study_comparison.csv",
+      "all_label_refit_performed": false,
+      "test_inference_performed": false,
+      "kaggle_submission_performed": false
+    },
+    "streetclip_long40": {
+      "date": "2026-11-16",
+      "status": "validated_candidate_retained",
+      "epochs_completed": 40,
+      "selected_epochs": {
+        "representative": 40,
+        "spatial": 35
+      },
+      "metrics_file": "outputs/streetclip_long40_metrics.csv",
+      "decision_file": "outputs/streetclip_long40_decision.json",
+      "fit_cap_seconds_per_fold": 60,
+      "spatial_metrics": {
+        "score": 0.4365187978222352,
+        "borough_macro_f1": 0.7541396793084285,
+        "gps_score": 0.4012275887682137,
+        "mean_km": 5.987724112317863,
+        "median_km": 3.3717541062163714,
+        "p90_km": 14.69698170840299
+      },
+      "all_label_supervised_refit_performed": false,
+      "test_inference_performed": false
+    },
+    "retrieval_generalization_audit": {
+      "date": "2026-11-16",
+      "run_id": "20261116T173009_retrieval_generalization_audit",
+      "report": "outputs/retrieval_audit_latest.json",
+      "run_directory": "outputs/runs/20261116T173009_retrieval_generalization_audit",
+      "queries_evaluated": 23001,
+      "audit_seconds": 16.56271608301904,
+      "same_id_self_matches": 0,
+      "training_scope": "In-sample fitted head/geography; retrieval self-matches excluded; not leave-one-out validation",
+      "training_mean_km": {
+        "representative": 2.5315717142071095,
+        "spatial": 2.2752243422768856
+      },
+      "validation_top32_recall_within_1km": {
+        "representative": 0.906408094435076,
+        "spatial": 0.6253614209004543
+      },
+      "validation_combined_recall_within_1km": {
+        "representative": 0.9418212478920742,
+        "spatial": 0.7389508467575382
+      },
+      "oracle_use": "True labels used only for post-prediction diagnostic measurements",
+      "retained_model_changed": false,
+      "model_training_performed": false,
+      "encoder_extraction_performed": false,
+      "test_inference_performed": false,
+      "kaggle_submission_performed": false,
+      "next_proposed_experiment": "Matched cached-head study with geographically distant visual hard negatives; not yet executed"
+    },
+    "final_submission": {
+      "status": "ready_for_manual_kaggle_upload",
+      "metric_version": "mean_haversine_5km_v2",
+      "csv": "Kaggle Submissions/nycguessr_decoded_hybrid_20261118.csv",
+      "rows": 7908,
+      "csv_bytes": 302110,
+      "csv_sha256": "01ac13ccb5dd05c638cf17e372a77ba62b8dc91ed3f724f352857e71c04f9777",
+      "checkpoint": "outputs/decoded_rerank/submission_20261118/full/reranker.pth",
+      "checkpoint_sha256": "6fdfaf1583d5ce5e2aa222e1d527c8c1c4c4dcf4c5a6fdcaa2936107f5b9cec7",
+      "teacher_checkpoint_sha256": "b53c8323c76f304fabbd59947e597a881ce1c55ea7e190052eff4cf211df0682",
+      "base_checkpoint": "outputs/fusion/submission_20261117/full40.pth",
+      "base_checkpoint_sha256": "34acaf8c4ad1bd2c80314f4b320ad1bce066e6e06c77d69d314c5602cc959199",
+      "test_pairs": "outputs/decoded_rerank/submission_20261118/test_pairs.npz",
+      "test_pairs_sha256": "71bde965e22832a74522cf9ed4ae2f1f3be1efb54a0193dbfe1ca3ba13fb1c85",
+      "selected_decision": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/decision.json",
+      "selected_decision_sha256": "1dbc8cabad4e6f5c3cfb02a899961dd6724dfee614eea48c9a6b0b76f2ae9747",
+      "identity": {
+        "selected_hybrid_sha256": "1dbc8cabad4e6f5c3cfb02a899961dd6724dfee614eea48c9a6b0b76f2ae9747",
+        "config": {
+          "metric_version": "mean_haversine_5km_v2",
+          "meta_queries": 2048,
+          "spatial_meta_queries": 1024,
+          "dense_meta_queries": 1024,
+          "inner_block_km": 1.0,
+          "inner_buffer_km": 0.2,
+          "teacher_epochs": 40,
+          "reranker_epochs": 30,
+          "seeds": [
+            6643,
+            6644
+          ],
+          "teacher_seconds": 180.0,
+          "reranker_seconds": 180.0,
+          "phase_fit_seconds": 720.0,
+          "tag": "hybrid_meta_distribution_v1"
+        },
+        "metric_version": "mean_haversine_5km_v2",
+        "data_fingerprint": "02e28abe48e28dd2d2d2efd1d25f8ce614d887e31f2f0b6702333ccc6da742c5",
+        "base_checkpoint_sha256": "34acaf8c4ad1bd2c80314f4b320ad1bce066e6e06c77d69d314c5602cc959199",
+        "seed": 6643,
+        "source": "ee02c4cd09000e404ffedc061e458ec42c2235e766933e5335a6f470081a0858"
+      },
+      "validation_results": [
+        {
+          "method": "hybrid_meta",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.3657949464671101,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.313303587305805,
+          "mean_km": 3.4334820634709753,
+          "median_km": 1.1182499799430181,
+          "p90_km": 9.963252446208543,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.672673074870382
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.3878860663501396
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 2.074357204645164
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 3.1231150960467238
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.597507085827573
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6643/validation_hybrid_meta.csv",
+          "prediction_sha256": "2953289dc519e3dea430fef04c4c260a649ba867eddf8cd9bb38a5942f8cc7ff",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6643/reranker.pth",
+          "checkpoint_sha256": "8add6fc61f749bc9095f1a87ce67650c6cab80b951c5b384fbb4313ea583c1f5",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+          "source_checkpoint_sha256": "b684e7d4ee3c7dddfc874007672584346b9d9042d14ed887789703beace5900e",
+          "fraction_over_5km": 0.18043844856661045,
+          "fraction_over_10km": 0.09991568296795952,
+          "fraction_over_20km": 0.02824620573355818,
+          "worst_decile_error_share": 0.5383920540437,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0059657883954852995,
+              0.03152016388342922
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.03314326886380662,
+              0.17511202157460637
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "hybrid_meta",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.460753996424515,
+          "median_km": 2.7056363891759423,
+          "p90_km": 13.858874359907109,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.3873614676034185
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.741847391551319
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.664273465719351
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 5.168983084088912
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 11.206914986228185
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6643/validation_hybrid_meta.csv",
+          "prediction_sha256": "98923ab2e66528f1fa36babcac9196fb075b3e136a951c207f13fc0204fb7395",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6643/reranker.pth",
+          "checkpoint_sha256": "c4ae3049ccafa80319dd11cc17748bf4f45e16c6749d7c899b067b69f33a2549",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6643/best.pth",
+          "source_checkpoint_sha256": "ec264530b5005233b7901821befe05a6ffa0e3af920be49e7fe77a8f477d925f",
+          "fraction_over_5km": 0.33911606774060304,
+          "fraction_over_10km": 0.15613382899628253,
+          "fraction_over_20km": 0.050392399834779014,
+          "worst_decile_error_share": 0.4161915198380829,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.0073510324497681415
+            ],
+            "mean_error_reduction_km_interval_95": [
+              -0.01314632655422187,
+              0.13593991825472346
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "hybrid_meta",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.3852741384024441,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.3350501763156324,
+          "mean_km": 3.324749118421838,
+          "median_km": 1.080157645365214,
+          "p90_km": 9.510875588428597,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.32417389300257
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.226098668759861
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.1445930186603994
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 2.9849288388615087
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 5.957623251641328
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6644/validation_hybrid_meta.csv",
+          "prediction_sha256": "e07e98d55da06100a24787168dba1615a11defa64263e83fc5795035c19cfad4",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/representative_s6644/reranker.pth",
+          "checkpoint_sha256": "854ff24dfce45955d51fb61142be5bdb7593f55f9dfaedab9f4a18e1a61e4873",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6644/best.pth",
+          "source_checkpoint_sha256": "12fd81c3a16485a207cbde9acf885670189aa37b366b3e3bcc12bec717f62e5f",
+          "fraction_over_5km": 0.18465430016863407,
+          "fraction_over_10km": 0.09401349072512648,
+          "fraction_over_20km": 0.026559865092748734,
+          "worst_decile_error_share": 0.5370501638254903,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.020757549228751688,
+              0.05043636004585213
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.11531971793750914,
+              0.28020200025473385
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "hybrid_meta",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.574772562749687,
+          "median_km": 2.8084531069190826,
+          "p90_km": 14.08525005554701,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.262426212445445
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 4.9791692542857104
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.866544064882588
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 5.373557627156702
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.728046933580295
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6644/validation_hybrid_meta.csv",
+          "prediction_sha256": "6ddae4a6281f28246ffa1e9e547d1a0d5ca9f3dfab09dae3183eb5c97d225e98",
+          "checkpoint": "outputs/decoded_rerank/hybrid_a436c235fcd2c3ec/spatial_s6644/reranker.pth",
+          "checkpoint_sha256": "02835158afdb444b2379706f6bb87df8b45af374b1ade257312dedd454def139",
+          "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6644/best.pth",
+          "source_checkpoint_sha256": "34fa2483ee88901430b84d5044a4066d25bde864e5471350ed68c703016147ea",
+          "fraction_over_5km": 0.34613795952085913,
+          "fraction_over_10km": 0.16191656340355226,
+          "fraction_over_20km": 0.048740190004130525,
+          "worst_decile_error_share": 0.4089040199270883,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.0
+            ],
+            "mean_error_reduction_km_interval_95": [
+              -0.015039329828276627,
+              0.16881184722638226
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        }
+      ],
+      "training_locations_base": 11864,
+      "training_locations_teacher": 9449,
+      "training_locations_reranker": 2048,
+      "full_data_fit_has_heldout_score": false,
+      "total_phase_fit_seconds": 373.30587095569354,
+      "full_refit_seconds": 74.3734117919812,
+      "cached_test_inference_seconds": 22.198282582918182,
+      "maximum_serialization_difference_deg": 4.999890279577812e-09,
+      "new_public_score": null,
+      "kaggle_uploaded": false,
+      "train_cache_sha256": "a28d92f3db2d5205ed1ecc20e398dfc1e34ceba89493ac7affd751dd1346f370",
+      "test_dino_sha256": "a82a19cd8de9b15e4b092e76c1ad7e25875abf2300ac19b0878d574b93307234",
+      "old_fusion_csv_preserved": true,
+      "prior_public_baseline": {
+        "score": 0.42,
+        "approximate": true,
+        "source": "user_report",
+        "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b"
+      },
+      "manifest_file": "outputs/decoded_rerank/submission_20261118/manifest.json",
+      "verification_file": "outputs/decoded_rerank/submission_20261118/verification.json",
+      "all_predictions_reproduced_from_checkpoint": true,
+      "public_score": null
+    },
+    "public_leaderboard_score_source": "New selected hybrid candidate not yet submitted; latest_public_result records prior fusion about0.42.",
+    "fusion_study": {
+      "status": "retain_fusion_development_candidate",
+      "selected_variant": "fusion_random",
+      "primary_seed": 6643,
+      "primary_results": [
+        {
+          "variant": "fusion_random",
+          "split": "representative",
+          "seed": 6643,
+          "epoch": 40,
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+          "checkpoint_sha256": "b684e7d4ee3c7dddfc874007672584346b9d9042d14ed887789703beace5900e",
+          "score": 0.6649128291912187,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.6456567903325925,
+          "mean_km": 3.5434320966740755,
+          "median_km": 1.1705014584599587,
+          "p90_km": 10.405028149992596,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.866539135723067
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.498603599376181
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 2.070792634126879
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 3.21127753807056
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.891061946835735
+            }
+          },
+          "fraction_over_10km": 0.10328836424957842,
+          "fraction_over_20km": 0.030775716694772345,
+          "bootstrap": {
+            "score_gain_95pct_interval": [
+              0.05808554975712888,
+              0.1038601220792216
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "interpretation": "Reused development data; block-resampling uncertainty, not independent test evidence."
+          }
+        },
+        {
+          "variant": "fusion_random",
+          "split": "spatial",
+          "seed": 6643,
+          "epoch": 40,
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6643/best.pth",
+          "checkpoint_sha256": "ec264530b5005233b7901821befe05a6ffa0e3af920be49e7fe77a8f477d925f",
+          "score": 0.47950815054275164,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.44696767329671494,
+          "mean_km": 5.530323267032851,
+          "median_km": 2.80548696802783,
+          "p90_km": 14.01997824401501,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.511922481194002
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.831076610900791
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.777102432613804
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 5.194031003080259
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 11.240237468972381
+            }
+          },
+          "fraction_over_10km": 0.15406856670797192,
+          "fraction_over_20km": 0.05204460966542751,
+          "bootstrap": {
+            "score_gain_95pct_interval": [
+              0.01246996074013943,
+              0.07525328882181129
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "interpretation": "Reused development data; block-resampling uncertainty, not independent test evidence."
+          }
+        }
+      ],
+      "repeat_seed": 6644,
+      "repeat_results": [
+        {
+          "variant": "fusion_random",
+          "split": "representative",
+          "seed": 6644,
+          "epoch": 30,
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6644/best.pth",
+          "checkpoint_sha256": "12fd81c3a16485a207cbde9acf885670189aa37b366b3e3bcc12bec717f62e5f",
+          "score": 0.6676302929649708,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.648779236940662,
+          "mean_km": 3.51220763059338,
+          "median_km": 1.1975101073044627,
+          "p90_km": 10.084167557044603,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.42351327215025
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.4912763437710077
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.254071934684467
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 3.214406121049286
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 6.0006008577605225
+            }
+          },
+          "fraction_over_10km": 0.10118043844856661,
+          "fraction_over_20km": 0.03035413153456998
+        },
+        {
+          "variant": "fusion_random",
+          "split": "spatial",
+          "seed": 6644,
+          "epoch": 30,
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6644/best.pth",
+          "checkpoint_sha256": "34fa2483ee88901430b84d5044a4066d25bde864e5471350ed68c703016147ea",
+          "score": 0.46821863463943597,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.43546303619877125,
+          "mean_km": 5.645369638012288,
+          "median_km": 2.8347583141951644,
+          "p90_km": 14.215357124860851,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.524215457163509
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 5.033399473071049
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.856810993692382
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 5.465722281364295
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.48957797390258
+            }
+          },
+          "fraction_over_10km": 0.16480793060718713,
+          "fraction_over_20km": 0.050392399834779014
+        }
+      ],
+      "repeat_seed_passed": true,
+      "matched_second_seed_intervals": [
+        {
+          "split": "representative",
+          "seed": 6644,
+          "point_score_gain": 0.09164663385568694,
+          "score_gain_95pct_interval": [
+            0.0697781884472853,
+            0.1137110905024363
+          ],
+          "blocks": 617,
+          "replicates": 400,
+          "interpretation": "Reused development data; block-resampling uncertainty, not independent test evidence."
+        },
+        {
+          "split": "spatial",
+          "seed": 6644,
+          "point_score_gain": 0.01959434783207953,
+          "score_gain_95pct_interval": [
+            -0.005647827771473405,
+            0.04809976210900778
+          ],
+          "blocks": 159,
+          "replicates": 400,
+          "interpretation": "Reused development data; block-resampling uncertainty, not independent test evidence."
+        }
+      ],
+      "head_seconds": 1068.4496165430173,
+      "sampled_peak_head_driver_bytes": 1167458304,
+      "precision_audit": "outputs/fusion/precision.json",
+      "decision": "outputs/fusion/study_8ff4561c2d7cdd27/decision.json",
+      "decision_sha256": "caa616ebc090dedb6f0d041e827fb061542765ea18350ea3cfa6c60339768185",
+      "verification": "outputs/fusion/study_8ff4561c2d7cdd27/verification.json",
+      "checks_passed": 53,
+      "notebook": "NYCGuessr.ipynb",
+      "new_public_score": null,
+      "all_label_fusion_refit_performed": true,
+      "new_test_inference_performed": true,
+      "hard_negative_mining_retained": false,
+      "autonomous_monitoring_restored_by_user": "2026-11-17"
+    },
+    "historical_submissions": [
+      {
+        "status": "ready_for_manual_kaggle_upload",
+        "csv": "Kaggle Submissions/nycguessr_streetclip40_20261116.csv",
+        "csv_sha256": "c065fb05a3f31c9195f4132f726c2f6c7d1b52195b831dcc59dbe877e33dc35f",
+        "csv_bytes": 302382,
+        "rows": 7908,
+        "headers": [
+          "sample_id",
+          "borough",
+          "latitude",
+          "longitude"
+        ],
+        "template_order_verified": true,
+        "template_sha256": "f08128dc0aac717cf9d624aa96816d6b8a49866d05d477006560ef878dd34450",
+        "source_checkpoint": "outputs/runs/20261116T165854_compass_normfix_tau10_long40_representative/best.pth",
+        "source_sha256": "b81144fcaf8aac8467ffe7074401b16403eacd6aa8db63169f15eb891e6ecd10",
+        "checkpoint": "outputs/runs/20261116T174151_compass_submission40_full/best.pth",
+        "checkpoint_sha256": "8991cb2d59eb8cc77272b37644b8af94cdbd5817001af8652791c7e4e91fe4f1",
+        "training_feature_file": "outputs/features/streetclip_train_23f1be61d2b2b2cd.npy",
+        "training_feature_sha256": "b9be80acd9d389f34b558321403d9f4d5ef4e54e100f31800d05426f7ae2f2e8",
+        "test_feature_file": "outputs/features/streetclip_test_f1901b97eac036c7.npy",
+        "test_feature_sha256": "b6870dc542cdfd23cc701572da74fe5b239dec0088eee90679a539c9bcb39695",
+        "test_cache_metadata": "outputs/features/streetclip_test_f1901b97eac036c7.json",
+        "training_locations": 11864,
+        "final_epoch": 40,
+        "final_fit_held_out_score": null,
+        "source_development_scores": {
+          "representative": 0.5826461040287263,
+          "spatial": 0.43651879782223524
+        },
+        "public_leaderboard_score": null,
+        "kaggle_uploaded": false,
+        "borough_counts": {
+          "Queens": 2997,
+          "Brooklyn": 1818,
+          "Manhattan": 1305,
+          "Bronx": 1151,
+          "Staten Island": 637
+        },
+        "coordinate_ranges": {
+          "latitude": [
+            40.50322403,
+            40.90257226
+          ],
+          "longitude": [
+            -74.2436423,
+            -73.70972671
+          ]
+        },
+        "elapsed_seconds": 4160.843915708014,
+        "source_notebook_sha256": "663021f91033415fc82d4582f0b7058e5b2971ceec36174939ae9d1c6a140ba2",
+        "manifest_file": "outputs/streetclip_submission_manifest.json",
+        "verification_file": "outputs/streetclip_submission_verification.json",
+        "notebook_verification": "outputs/notebook_submission_final_verification.json",
+        "refit_seconds": 53.71537062502466,
+        "test_extraction_seconds": 4088.435975792003,
+        "test_extraction_limit_seconds": 4500.0,
+        "all_predictions_reproduced_from_checkpoint": true
+      },
+      {
+        "status": "ready_for_manual_kaggle_upload",
+        "csv": "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+        "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+        "csv_bytes": 302110,
+        "rows": 7908,
+        "headers": [
+          "sample_id",
+          "borough",
+          "latitude",
+          "longitude"
+        ],
+        "decision_sha256": "caa616ebc090dedb6f0d041e827fb061542765ea18350ea3cfa6c60339768185",
+        "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+        "source_checkpoint_sha256": "b684e7d4ee3c7dddfc874007672584346b9d9042d14ed887789703beace5900e",
+        "checkpoint": "outputs/fusion/submission_20261117/full40.pth",
+        "checkpoint_sha256": "34acaf8c4ad1bd2c80314f4b320ad1bce066e6e06c77d69d314c5602cc959199",
+        "full_fit_held_out_score": null,
+        "train_cache_sha256": "a28d92f3db2d5205ed1ecc20e398dfc1e34ceba89493ac7affd751dd1346f370",
+        "test_dino_sha256": "a82a19cd8de9b15e4b092e76c1ad7e25875abf2300ac19b0878d574b93307234",
+        "test_dino_seconds": 1687.6254457089817,
+        "test_dino_sampled_peak_driver_bytes": 3602382848,
+        "street_test_sha256": "b6870dc542cdfd23cc701572da74fe5b239dec0088eee90679a539c9bcb39695",
+        "source_development_scores": {
+          "representative": 0.6649128291912187,
+          "spatial": 0.47950815054275164
+        },
+        "borough_counts": {
+          "Queens": 3020,
+          "Brooklyn": 1909,
+          "Manhattan": 1271,
+          "Bronx": 1125,
+          "Staten Island": 583
+        },
+        "latitude_range": [
+          40.50289422,
+          40.90806355
+        ],
+        "longitude_range": [
+          -74.24409694,
+          -73.70626018
+        ],
+        "public_score": null,
+        "kaggle_uploaded": false,
+        "manifest_file": "outputs/fusion/submission_20261117/manifest.json",
+        "verification_file": "outputs/fusion/submission_20261117/verification.json",
+        "notebook_verification": "outputs/fusion/submission_20261117/notebook_verify_execution.json",
+        "refit_seconds": 127.39559633401223,
+        "all_predictions_reproduced_from_checkpoint": true,
+        "code_cells_verified": 33,
+        "checks_passed": 55,
+        "source_development_scores_metric_version": "mean_haversine_10km_v1",
+        "source_development_scores_v2": {
+          "representative": 0.3460039404905524,
+          "spatial": 0.0772372445757082
+        },
+        "source_development_scores_v2_metric_version": "mean_haversine_5km_v2"
+      }
+    ],
+    "fusion_submission": {
+      "status": "ready_for_manual_kaggle_upload",
+      "csv": "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+      "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+      "csv_bytes": 302110,
+      "rows": 7908,
+      "headers": [
+        "sample_id",
+        "borough",
+        "latitude",
+        "longitude"
+      ],
+      "decision_sha256": "caa616ebc090dedb6f0d041e827fb061542765ea18350ea3cfa6c60339768185",
+      "source_checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+      "source_checkpoint_sha256": "b684e7d4ee3c7dddfc874007672584346b9d9042d14ed887789703beace5900e",
+      "checkpoint": "outputs/fusion/submission_20261117/full40.pth",
+      "checkpoint_sha256": "34acaf8c4ad1bd2c80314f4b320ad1bce066e6e06c77d69d314c5602cc959199",
+      "full_fit_held_out_score": null,
+      "train_cache_sha256": "a28d92f3db2d5205ed1ecc20e398dfc1e34ceba89493ac7affd751dd1346f370",
+      "test_dino_sha256": "a82a19cd8de9b15e4b092e76c1ad7e25875abf2300ac19b0878d574b93307234",
+      "test_dino_seconds": 1687.6254457089817,
+      "test_dino_sampled_peak_driver_bytes": 3602382848,
+      "street_test_sha256": "b6870dc542cdfd23cc701572da74fe5b239dec0088eee90679a539c9bcb39695",
+      "source_development_scores": {
+        "representative": 0.6649128291912187,
+        "spatial": 0.47950815054275164
+      },
+      "borough_counts": {
+        "Queens": 3020,
+        "Brooklyn": 1909,
+        "Manhattan": 1271,
+        "Bronx": 1125,
+        "Staten Island": 583
+      },
+      "latitude_range": [
+        40.50289422,
+        40.90806355
+      ],
+      "longitude_range": [
+        -74.24409694,
+        -73.70626018
+      ],
+      "public_score": null,
+      "kaggle_uploaded": false,
+      "manifest_file": "outputs/fusion/submission_20261117/manifest.json",
+      "verification_file": "outputs/fusion/submission_20261117/verification.json",
+      "notebook_verification": "outputs/fusion/submission_20261117/notebook_verify_execution.json",
+      "refit_seconds": 127.39559633401223,
+      "all_predictions_reproduced_from_checkpoint": true,
+      "code_cells_verified": 33,
+      "checks_passed": 55,
+      "source_development_scores_metric_version": "mean_haversine_10km_v1",
+      "source_development_scores_v2": {
+        "representative": 0.3460039404905524,
+        "spatial": 0.0772372445757082
+      },
+      "source_development_scores_v2_metric_version": "mean_haversine_5km_v2"
+    },
+    "historical_public_leaderboard_scores": [
+      {
+        "score": 0.60599,
+        "metric_version": "mean_haversine_10km_v1",
+        "source": "user_report",
+        "csv": "Kaggle Submissions/nycguessr_streetclip40_20261116.csv",
+        "current_after_rescoring": false
+      }
+    ],
+    "historical_metric_version": "mean_haversine_10km_v1",
+    "current_metric_version": "mean_haversine_5km_v2",
+    "original_requested_target_score": 0.9,
+    "stretch_target_score": 0.9,
+    "metric_update": {
+      "received_date": "2026-11-17",
+      "source_type": "user_supplied_staff_screenshot",
+      "author": "Dipesh Kumar (TA)",
+      "posting_date_visible": false,
+      "gps_normalizer_old_km": 10.0,
+      "gps_normalizer_current_km": 5.0,
+      "borough_evaluation_unchanged": true,
+      "weights": {
+        "borough_macro_f1": 0.1,
+        "gps_score": 0.9
+      },
+      "aggregation": "clip_after_mean",
+      "aggregation_basis": "Denominator-only update inferred from announcement; original handout aggregation preserved.",
+      "live_kaggle_scorer_verified": false,
+      "public_rescoring_announced": true,
+      "staff_says_rankings_tested_unchanged": "Empirical staff report; not treated as a mathematical invariance guarantee."
+    },
+    "metric_v2": {
+      "metric_version": "mean_haversine_5km_v2",
+      "report": "outputs/metric_v2/rescore_3469bcfd7119ce8e/rescore.json",
+      "report_sha256": "a0f7f2962ba330c09c9bb217f5cbaa9e627ba5ee64dbd78c88811da274054386",
+      "execution": "outputs/metric_v2/notebook_execution.json",
+      "tests_passed": 5,
+      "prediction_sets_rescored": 18,
+      "goals": [
+        {
+          "macro_f1": 0.8,
+          "target_v2_score": 0.8,
+          "required_mean_error_km": 1.0000000000000004
+        },
+        {
+          "macro_f1": 0.8,
+          "target_v2_score": 0.9,
+          "required_mean_error_km": 0.444444444444444
+        },
+        {
+          "macro_f1": 0.85,
+          "target_v2_score": 0.8,
+          "required_mean_error_km": 1.0277777777777775
+        },
+        {
+          "macro_f1": 0.85,
+          "target_v2_score": 0.9,
+          "required_mean_error_km": 0.4722222222222222
+        },
+        {
+          "macro_f1": 0.9,
+          "target_v2_score": 0.8,
+          "required_mean_error_km": 1.0555555555555551
+        },
+        {
+          "macro_f1": 0.9,
+          "target_v2_score": 0.9,
+          "required_mean_error_km": 0.4999999999999999
+        }
+      ],
+      "distance_milestones_km": [
+        3.0,
+        2.0,
+        1.0,
+        0.5
+      ],
+      "selection_guard": {
+        "minimum_representative_score_gain": 0.002,
+        "minimum_mean_error_reduction_each_fold_km": 0.05,
+        "spatial_composite_not_sole_gate_when_gps_clipped": true
+      },
+      "primary_results": [
+        {
+          "model": "fusion_random",
+          "split": "representative",
+          "seed": 6643,
+          "epoch": 40,
+          "prediction": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/validation_best.csv",
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6643/best.pth",
+          "score": 0.3460039404905524,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.2913135806651853,
+          "mean_km": 3.5434320966740733,
+          "median_km": 1.1705014584599587,
+          "p90_km": 10.405028149993212,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.866539135723075
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.4986035993761697
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 2.070792634126877
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 3.2112775380705583
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.891061946835737
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "legacy_score": 0.664912829191219,
+          "legacy_gps_score": 0.6456567903325927,
+          "fraction_over_5km": 0.1884485666104553,
+          "fraction_over_10km": 0.10328836424957842,
+          "fraction_over_20km": 0.030775716694772345,
+          "worst_decile_error_share": 0.5352526015385888,
+          "prediction_sha256": "d8d037e238c1eace2128d38398c0e87c7c69c5eeecdc1b2b6e5acd80aec0ede5",
+          "fraction_within_0.25km": 0.1218381112984823,
+          "fraction_within_0.5km": 0.2626475548060708,
+          "fraction_within_1.0km": 0.45193929173693087,
+          "fraction_within_2.0km": 0.6361720067453626
+        },
+        {
+          "model": "fusion_random",
+          "split": "spatial",
+          "seed": 6643,
+          "epoch": 40,
+          "prediction": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6643/validation_best.csv",
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6643/best.pth",
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.53032326703285,
+          "median_km": 2.8054869680272505,
+          "p90_km": 14.01997824401501,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.511922481194002
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.8310766109007925
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.7771024326138045
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 5.1940310030802515
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 11.240237468972394
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "legacy_score": 0.47950815054275164,
+          "legacy_gps_score": 0.44696767329671494,
+          "fraction_over_5km": 0.3465510119785213,
+          "fraction_over_10km": 0.15406856670797192,
+          "fraction_over_20km": 0.05204460966542751,
+          "worst_decile_error_share": 0.4108699898082436,
+          "prediction_sha256": "0e8ce3453c3e8bd66b8dfb8d561f63d34c8afd45f92552b2812b7b8fe2636be2",
+          "fraction_within_0.25km": 0.004543577034283354,
+          "fraction_within_0.5km": 0.0375877736472532,
+          "fraction_within_1.0km": 0.1755472945064023,
+          "fraction_within_2.0km": 0.3990086741016109
+        }
+      ],
+      "repeat_results": [
+        {
+          "model": "fusion_random",
+          "split": "representative",
+          "seed": 6644,
+          "epoch": 30,
+          "prediction": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6644/validation_best.csv",
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_representative_s6644/best.pth",
+          "score": 0.3515316062115668,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.2975584738813243,
+          "mean_km": 3.5122076305933785,
+          "median_km": 1.1975101073044627,
+          "p90_km": 10.084167557044603,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.4235132721502355
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.491276343771012
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.254071934684468
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 3.214406121049282
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 6.000600857760527
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "legacy_score": 0.667630292964971,
+          "legacy_gps_score": 0.6487792369406622,
+          "fraction_over_5km": 0.1973018549747049,
+          "fraction_over_10km": 0.10118043844856661,
+          "fraction_over_20km": 0.03035413153456998,
+          "worst_decile_error_share": 0.5192166443871086,
+          "prediction_sha256": "8882bff01e153217809ef262f2d9b68aba3ae4fc31e72f486e240b5a8831f0e8",
+          "fraction_within_0.25km": 0.11720067453625632,
+          "fraction_within_0.5km": 0.2630691399662732,
+          "fraction_within_1.0km": 0.4502529510961214,
+          "fraction_within_2.0km": 0.6357504215851602
+        },
+        {
+          "model": "fusion_random",
+          "split": "spatial",
+          "seed": 6644,
+          "epoch": 30,
+          "prediction": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6644/validation_best.csv",
+          "checkpoint": "outputs/fusion/study_8ff4561c2d7cdd27/fusion_random_spatial_s6644/best.pth",
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.645369638012286,
+          "median_km": 2.8347583141951644,
+          "p90_km": 14.215357124860851,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.524215457163506
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 5.033399473071049
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.856810993692382
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 5.465722281364289
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.489577973902586
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "legacy_score": 0.4682186346394361,
+          "legacy_gps_score": 0.43546303619877136,
+          "fraction_over_5km": 0.34779016935150764,
+          "fraction_over_10km": 0.16480793060718713,
+          "fraction_over_20km": 0.050392399834779014,
+          "worst_decile_error_share": 0.40782035050566257,
+          "prediction_sha256": "e9fd0f765e1c8577505afa0d25ec5d75835fb2ddb1f473a07b9ea6c1a3b58ba3",
+          "fraction_within_0.25km": 0.007021891780256092,
+          "fraction_within_0.5km": 0.03634861627426683,
+          "fraction_within_1.0km": 0.1701776125567947,
+          "fraction_within_2.0km": 0.38744320528707143
+        }
+      ],
+      "current_candidate_passes_distance_guard": true,
+      "repeat_passes_distance_guard": true,
+      "intervals": [
+        {
+          "model": "fusion_random",
+          "split": "representative",
+          "seed": 6643,
+          "score_gain_interval_95": [
+            0.11313886726422892,
+            0.203061049207456
+          ],
+          "mean_error_reduction_km_interval_95": [
+            0.6117035278566668,
+            1.1036852381873885
+          ],
+          "blocks": 617,
+          "replicates": 400,
+          "metric_version": "mean_haversine_5km_v2",
+          "scope": "Paired reused-development block bootstrap; not independent test evidence."
+        },
+        {
+          "model": "fusion_random",
+          "split": "spatial",
+          "seed": 6643,
+          "score_gain_interval_95": [
+            8.283321365315859e-05,
+            0.004345073050373906
+          ],
+          "mean_error_reduction_km_interval_95": [
+            0.1342822357838234,
+            0.8032379437624335
+          ],
+          "blocks": 159,
+          "replicates": 400,
+          "metric_version": "mean_haversine_5km_v2",
+          "scope": "Paired reused-development block bootstrap; not independent test evidence."
+        },
+        {
+          "model": "fusion_random",
+          "split": "representative",
+          "seed": 6644,
+          "score_gain_interval_95": [
+            0.1353572590320668,
+            0.2216033219060191
+          ],
+          "mean_error_reduction_km_interval_95": [
+            0.7308189035932654,
+            1.202388707835897
+          ],
+          "blocks": 617,
+          "replicates": 400,
+          "metric_version": "mean_haversine_5km_v2",
+          "scope": "Paired reused-development block bootstrap; not independent test evidence."
+        },
+        {
+          "model": "fusion_random",
+          "split": "spatial",
+          "seed": 6644,
+          "score_gain_interval_95": [
+            0.0002946635699356916,
+            0.0037897710748806177
+          ],
+          "mean_error_reduction_km_interval_95": [
+            -0.06747873309463612,
+            0.49516710441488665
+          ],
+          "blocks": 159,
+          "replicates": 400,
+          "metric_version": "mean_haversine_5km_v2",
+          "scope": "Paired reused-development block bootstrap; not independent test evidence."
+        }
+      ],
+      "historical_metrics_and_predictions_preserved": true,
+      "new_training_or_inference": false
+    },
+    "salad_study": {
+      "date": "2026-11-18",
+      "status": "completed_no_retained_gain",
+      "metric_version": "mean_haversine_5km_v2",
+      "weights": {
+        "model": "DINOv2-SALAD",
+        "upstream_commit": "6aede13a3f6c25750bf7fde10209c06cb73060bb",
+        "release": "v1.0.0",
+        "url": "https://github.com/serizba/salad/releases/download/v1.0.0/dino_salad.ckpt",
+        "weights_bytes": 352040378,
+        "weights_sha256": "6b3f1720954293e83da6966c5cfcfc6713200d7fefadcca76fc51aeb80b3cada",
+        "remote_release_digest": null,
+        "checksum_basis": "Recorded from first official release download; no digest was supplied by release metadata.",
+        "pretraining": "Public image encoder/aggregation pretrained on GSV-Cities; weights only, no dataset download.",
+        "upstream_source": "outputs/models/salad_v1_6aede13a/upstream_source.json",
+        "license_reference": "https://github.com/serizba/salad/blob/6aede13a3f6c25750bf7fde10209c06cb73060bb/LICENSE",
+        "state_keys": 188,
+        "download_seconds": 10.34034645895008
+      },
+      "benchmark": "outputs/salad/benchmark.json",
+      "pilot": "outputs/salad/pilot/comparison.json",
+      "pooled_pilot": "outputs/salad/pooled_pilot/comparison.json",
+      "fusion_patch_rerank": "outputs/salad/fusion_patch_rerank/comparison.json",
+      "verification": "outputs/salad/verification.json",
+      "execution": "outputs/salad/notebook_verify_execution.json",
+      "tests_passed": 13,
+      "pilot_unique_locations": 2374,
+      "pilot_images": 9496,
+      "pilot_extraction_seconds": 400.80663658399135,
+      "sampled_peak_encoder_driver_bytes": 1445773312,
+      "pilot_cache_subset_hashes": {
+        "global_sha256": "9969867d3f358652ff1922c393238c2cc5ee4a0936b7f42fd9c34083bb6a0c74",
+        "regions_sha256": "9fa3a51c160ed8782bf0d2e0ce005b80236dcb8ef7a6beac565d006489c8cf46"
+      },
+      "full_extraction_performed": false,
+      "model_fitting_performed": false,
+      "test_inference_performed": false,
+      "new_submission_csv": false,
+      "retained_method": "fusion_random",
+      "recommended_next_task": "Training-only learned candidate reranker on cached view/region evidence."
+    },
+    "learned_rerank_study": {
+      "date": "2026-11-18",
+      "status": "completed_no_retained_gain",
+      "metric_version": "mean_haversine_5km_v2",
+      "notebook_cells": "114-123",
+      "decision": "outputs/learned_rerank/study_4826a74b0cc13bec/decision.json",
+      "decision_sha256": "10cac1ad67d718574fe957c7497488dfa527f0b042a1c4bca2e382a9c596b232",
+      "retained": false,
+      "seed_pass": {
+        "6643": false,
+        "6644": false
+      },
+      "config": {
+        "metric_version": "mean_haversine_5km_v2",
+        "meta_queries": 2048,
+        "teacher_epochs": 40,
+        "reranker_epochs": 30,
+        "teacher_seconds": 180.0,
+        "reranker_seconds": 60.0,
+        "aggregate_fit_seconds": 1200.0,
+        "pair_seconds": 600.0,
+        "seed_for_meta_ids": 6643,
+        "seeds": [
+          6643,
+          6644
+        ],
+        "candidate_count": 32,
+        "residual_bound": 4.0,
+        "learning_rate": 0.001,
+        "weight_decay": 0.01,
+        "batch_queries": 128,
+        "tag": "heldout_teacher_v1"
+      },
+      "fit_seconds": 309.2587373328861,
+      "study_execution_seconds": 397.2470142500242,
+      "sampled_peak_driver_bytes": 1163100160,
+      "inline_tests_passed": 8,
+      "artifact_checks_passed": 140,
+      "full_validation_replay": true,
+      "verification": "outputs/learned_rerank/study_4826a74b0cc13bec/verification_replay.json",
+      "replay_execution": "outputs/learned_rerank/notebook_replay_execution.json",
+      "study_execution": "outputs/learned_rerank/notebook_study_execution.json",
+      "validation_results": [
+        {
+          "method": "original",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.346003940490552,
+          "mean_km": 3.5434320966740755,
+          "median_km": 1.1705014584599587,
+          "p90_km": 10.405028149992596,
+          "borough_macro_f1": 0.8382171789188557,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/representative_s6643/validation_original.csv",
+          "prediction_sha256": "d8d037e238c1eace2128d38398c0e87c7c69c5eeecdc1b2b6e5acd80aec0ede5"
+        },
+        {
+          "method": "learned",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.3348223713203451,
+          "mean_km": 3.6055519253974473,
+          "median_km": 1.184723029580502,
+          "p90_km": 10.564907475736023,
+          "borough_macro_f1": 0.8382171789188557,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/representative_s6643/validation_learned.csv",
+          "prediction_sha256": "68da859c76ba9c477ab4b6aa570d899002993109427919df1450440e8713685d"
+        },
+        {
+          "method": "original",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "mean_km": 5.530323267032851,
+          "median_km": 2.80548696802783,
+          "p90_km": 14.01997824401501,
+          "borough_macro_f1": 0.772372445757082,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/spatial_s6643/validation_original.csv",
+          "prediction_sha256": "0e8ce3453c3e8bd66b8dfb8d561f63d34c8afd45f92552b2812b7b8fe2636be2"
+        },
+        {
+          "method": "learned",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "mean_km": 5.619460733803691,
+          "median_km": 2.851469074615074,
+          "p90_km": 14.105695142963015,
+          "borough_macro_f1": 0.772372445757082,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/spatial_s6643/validation_learned.csv",
+          "prediction_sha256": "5decc414a8822dae211a99c7c814bacac3befe48e4ba51dd3b6e815699820679"
+        },
+        {
+          "method": "original",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.3515316062115666,
+          "mean_km": 3.51220763059338,
+          "median_km": 1.1975101073044627,
+          "p90_km": 10.084167557044603,
+          "borough_macro_f1": 0.8372897971837496,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/representative_s6644/validation_original.csv",
+          "prediction_sha256": "8882bff01e153217809ef262f2d9b68aba3ae4fc31e72f486e240b5a8831f0e8"
+        },
+        {
+          "method": "learned",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.34618521205681585,
+          "mean_km": 3.541909820341995,
+          "median_km": 1.2142201591689705,
+          "p90_km": 10.11296804252142,
+          "borough_macro_f1": 0.8372897971837496,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/representative_s6644/validation_learned.csv",
+          "prediction_sha256": "ef82211bee83e43a527dae0b76238ef8af2dbf708f31455ac9c9b658a58bac72"
+        },
+        {
+          "method": "original",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "mean_km": 5.645369638012288,
+          "median_km": 2.8347583141951644,
+          "p90_km": 14.215357124860851,
+          "borough_macro_f1": 0.7630190206054184,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/spatial_s6644/validation_original.csv",
+          "prediction_sha256": "e9fd0f765e1c8577505afa0d25ec5d75835fb2ddb1f473a07b9ea6c1a3b58ba3"
+        },
+        {
+          "method": "learned",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "mean_km": 5.689019242099904,
+          "median_km": 2.8374096141036484,
+          "p90_km": 14.14864390196424,
+          "borough_macro_f1": 0.7630190206054184,
+          "prediction": "outputs/learned_rerank/study_4826a74b0cc13bec/spatial_s6644/validation_learned.csv",
+          "prediction_sha256": "cec903b0271d3710c8caa9c3c2448665a465dc5c0025af9a70e226db9ded7b13"
+        }
+      ],
+      "candidate_diagnostics": [
+        {
+          "kind": "in_sample_meta_ranking_proxy",
+          "seed": 6643,
+          "split": "representative",
+          "diagnostic_only": true,
+          "original_expected_candidate_distance_km": 4.983919143676758,
+          "learned_expected_candidate_distance_km": 4.806055068969727
+        },
+        {
+          "kind": "validation_candidate_coverage",
+          "seed": 6643,
+          "split": "representative",
+          "queries": 2372,
+          "diagnostic_only": true,
+          "oracle_top32_mean_km": 0.5467430353164673,
+          "oracle_top32_median_km": 0.14102047681808472,
+          "top32_recall_within_0.25km": 0.7491568296795953,
+          "top32_recall_within_0.5km": 0.872681281618887,
+          "top32_recall_within_1.0km": 0.9198988195615514
+        },
+        {
+          "kind": "in_sample_meta_ranking_proxy",
+          "seed": 6643,
+          "split": "spatial",
+          "diagnostic_only": true,
+          "original_expected_candidate_distance_km": 4.889398574829102,
+          "learned_expected_candidate_distance_km": 4.81491231918335
+        },
+        {
+          "kind": "validation_candidate_coverage",
+          "seed": 6643,
+          "split": "spatial",
+          "queries": 2421,
+          "diagnostic_only": true,
+          "oracle_top32_mean_km": 1.5189149379730225,
+          "oracle_top32_median_km": 0.6992197036743164,
+          "top32_recall_within_0.25km": 0.056588186699710864,
+          "top32_recall_within_0.5km": 0.3420074349442379,
+          "top32_recall_within_1.0km": 0.6707971912432878
+        },
+        {
+          "kind": "in_sample_meta_ranking_proxy",
+          "seed": 6644,
+          "split": "representative",
+          "diagnostic_only": true,
+          "original_expected_candidate_distance_km": 5.125100612640381,
+          "learned_expected_candidate_distance_km": 4.945231914520264
+        },
+        {
+          "kind": "validation_candidate_coverage",
+          "seed": 6644,
+          "split": "representative",
+          "queries": 2372,
+          "diagnostic_only": true,
+          "oracle_top32_mean_km": 0.519156813621521,
+          "oracle_top32_median_km": 0.141027569770813,
+          "top32_recall_within_0.25km": 0.7428330522765598,
+          "top32_recall_within_0.5km": 0.8676222596964587,
+          "top32_recall_within_1.0km": 0.9308600337268128
+        },
+        {
+          "kind": "in_sample_meta_ranking_proxy",
+          "seed": 6644,
+          "split": "spatial",
+          "diagnostic_only": true,
+          "original_expected_candidate_distance_km": 4.9033379554748535,
+          "learned_expected_candidate_distance_km": 4.735258102416992
+        },
+        {
+          "kind": "validation_candidate_coverage",
+          "seed": 6644,
+          "split": "spatial",
+          "queries": 2421,
+          "diagnostic_only": true,
+          "oracle_top32_mean_km": 1.5492591857910156,
+          "oracle_top32_median_km": 0.705947995185852,
+          "top32_recall_within_0.25km": 0.05782734407269723,
+          "top32_recall_within_0.5km": 0.3242461792647666,
+          "top32_recall_within_1.0km": 0.6707971912432878
+        }
+      ],
+      "new_encoder_extraction": false,
+      "test_inference": false,
+      "new_submission_csv": false,
+      "retained_method": "fusion_random",
+      "current_public_score": null,
+      "recommended_next_task": "Controlled decoder-aware reranker loss ablation using final-coordinate GPS distance; fixed candidates/features/teacher partitions.",
+      "final_disabled_execution": {
+        "file": "outputs/learned_rerank/notebook_verify_execution.json",
+        "code_cells": 35,
+        "inline_tests_passed": 8,
+        "elapsed_seconds": 3.975234334007837,
+        "error_cells": [],
+        "historical_run_all": false
+      }
+    },
+    "fusion_reexport": {
+      "status": "ready_for_manual_kaggle_upload",
+      "metric_version": "mean_haversine_5km_v2",
+      "model": "fusion_random",
+      "csv": "Kaggle Submissions/nycguessr_fusion40_20261118.csv",
+      "rows": 7908,
+      "csv_bytes": 302110,
+      "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+      "checkpoint": "outputs/fusion/submission_20261117/full40.pth",
+      "checkpoint_sha256": "34acaf8c4ad1bd2c80314f4b320ad1bce066e6e06c77d69d314c5602cc959199",
+      "full_data_epochs": 40,
+      "training_locations": 11864,
+      "full_data_fit_has_heldout_score": false,
+      "validation_scores": [
+        {
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.3460039404905524,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.2913135806651853,
+          "mean_km": 3.5434320966740733,
+          "median_km": 1.1705014584599587,
+          "p90_km": 10.405028149993212,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.866539135723075
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.4986035993761697
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 2.070792634126877
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 3.2112775380705583
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.891061946835737
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0
+        },
+        {
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.53032326703285,
+          "median_km": 2.8054869680272505,
+          "p90_km": 14.01997824401501,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.511922481194002
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.8310766109007925
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.7771024326138045
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 5.1940310030802515
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 11.240237468972394
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0
+        },
+        {
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.3515316062115668,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.2975584738813243,
+          "mean_km": 3.5122076305933785,
+          "median_km": 1.1975101073044627,
+          "p90_km": 10.084167557044603,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.4235132721502355
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.491276343771012
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.254071934684468
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 3.214406121049282
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 6.000600857760527
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0
+        },
+        {
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.645369638012286,
+          "median_km": 2.8347583141951644,
+          "p90_km": 14.215357124860851,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.524215457163506
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 5.033399473071049
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.856810993692382
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 5.465722281364289
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.489577973902586
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0
+        }
+      ],
+      "decision_sha256": "caa616ebc090dedb6f0d041e827fb061542765ea18350ea3cfa6c60339768185",
+      "train_cache_sha256": "a28d92f3db2d5205ed1ecc20e398dfc1e34ceba89493ac7affd751dd1346f370",
+      "test_dino_sha256": "a82a19cd8de9b15e4b092e76c1ad7e25875abf2300ac19b0878d574b93307234",
+      "street_test_sha256": "b6870dc542cdfd23cc701572da74fe5b239dec0088eee90679a539c9bcb39695",
+      "previous_csv": "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+      "previous_csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+      "byte_identical_to_previous": true,
+      "all_predictions_replayed": true,
+      "maximum_serialization_difference_deg": 4.999975544706103e-09,
+      "device": "mps",
+      "elapsed_seconds": 12.160109083983116,
+      "new_training": false,
+      "new_image_extraction": false,
+      "reranker_included": false,
+      "public_score": null,
+      "kaggle_uploaded": false,
+      "manifest": "outputs/fusion/submission_20261118/manifest.json",
+      "execution": "outputs/fusion/submission_20261118/notebook_export_execution.json",
+      "executed_code_cells": 27,
+      "execution_seconds": 15.608928000088781
+    },
+    "latest_public_result": {
+      "score": 0.42,
+      "approximate": true,
+      "source": "user_report",
+      "reported_date": "2026-11-18",
+      "metric_version": "mean_haversine_5km_v2",
+      "model": "fusion_random",
+      "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+      "csvs": [
+        "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+        "Kaggle Submissions/nycguessr_fusion40_20261118.csv"
+      ],
+      "live_kaggle_verified": false
+    },
+    "fusion_progress_diagnosis": {
+      "report": "outputs/diagnostics/fusion_progress_20261118.json",
+      "execution": "outputs/diagnostics/fusion_progress_execution_20261118.json",
+      "notebook_cells": "127-128",
+      "training": false,
+      "inference": false,
+      "new_public_decline_established": false,
+      "public_result": {
+        "score": 0.42,
+        "approximate": true,
+        "source": "user_report",
+        "reported_date": "2026-11-18",
+        "metric_version": "mean_haversine_5km_v2",
+        "model": "fusion_random",
+        "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+        "csvs": [
+          "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+          "Kaggle Submissions/nycguessr_fusion40_20261118.csv"
+        ],
+        "live_kaggle_verified": false
+      }
+    },
+    "decoded_rerank_studies": {
+      "date": "2026-11-18",
+      "notebook_cells": "129-151",
+      "metric_version": "mean_haversine_5km_v2",
+      "fixed_pointer": "outputs/decoded_rerank/latest.json",
+      "gated_pointer": "outputs/decoded_rerank/gated_latest.json",
+      "selected_pointer": "outputs/decoded_rerank/hybrid_latest.json",
+      "development_verification": "outputs/decoded_rerank/verification_replay.json",
+      "production_verification": "outputs/decoded_rerank/submission_20261118/verification.json",
+      "inline_tests_passed": 11,
+      "artifact_checks_passed": 340,
+      "total_fit_seconds": 373.30587095569354,
+      "development_fit_seconds": 298.93245916371234,
+      "full_calibration_fit_seconds": 74.3734117919812,
+      "new_public_score": null,
+      "prior_public_result": {
+        "score": 0.42,
+        "approximate": true,
+        "source": "user_report",
+        "reported_date": "2026-11-18",
+        "metric_version": "mean_haversine_5km_v2",
+        "model": "fusion_random",
+        "csv_sha256": "075d86f3a426872c50f2b970d01b6cdb51319f6f102837dbd445a1019740ed3b",
+        "csvs": [
+          "Kaggle Submissions/nycguessr_fusion40_20261117.csv",
+          "Kaggle Submissions/nycguessr_fusion40_20261118.csv"
+        ],
+        "live_kaggle_verified": false
+      },
+      "new_encoder_extraction": false,
+      "new_data_or_dependencies": false,
+      "kaggle_uploaded": false,
+      "final_disabled_execution": {
+        "file": "outputs/decoded_rerank/submission_20261118/notebook_submission_verify_execution.json",
+        "code_cells": 49,
+        "inline_tests_passed": 11,
+        "error_cells": [],
+        "elapsed_seconds": 3.4539374579908326,
+        "historical_run_all": false
+      }
+    },
+    "spatial_target_study": {
+      "started_date": "2026-11-18",
+      "completed_date": "2026-11-19",
+      "target_spatial_mean_km": 5.0,
+      "stretch_spatial_mean_km": 4.0,
+      "target_met": false,
+      "stretch_met": false,
+      "best_experimental_method": "pooled_gate",
+      "best_experimental_results": [
+        {
+          "method": "pooled_gate",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.41783629469184663,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.37112730755551226,
+          "mean_km": 3.144363462222439,
+          "median_km": 0.9765506901216764,
+          "p90_km": 8.78216602432783,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7603550295857988,
+              "mean_km": 4.310774317419062
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.815068493150685,
+              "mean_km": 3.185972432168157
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8852459016393442,
+              "mean_km": 1.8916503395095974
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.878987898789879,
+              "mean_km": 2.8055212128376485
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.8514285714285714,
+              "mean_km": 5.099790750717076
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/spatial_target/pooled_00b946d32fb7f06f/representative_s6643/validation_pooled_gate.csv",
+          "prediction_sha256": "7ee5ef03e5764fa44b28cde3e7ed5f3597dc57d48a77f40651bebd4f59a463b7",
+          "checkpoint": "outputs/spatial_target/pooled_00b946d32fb7f06f/gated_representative_s6643/model.pth",
+          "checkpoint_sha256": "522080a986c82b47631cc6588a1702e5cc7e6fbe16f2e05e9ec6b2e65e0a9e1d",
+          "fraction_over_10km": 0.0872681281618887,
+          "fraction_over_20km": 0.026138279932546374,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.030262424250236505,
+              0.07215742346296379
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.1681245791679806,
+              0.4008745747942435
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "pooled_gate",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.212053132879058,
+          "median_km": 2.649609050426857,
+          "p90_km": 12.855300011917118,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6618705035971223,
+              "mean_km": 7.13190157260425
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7318718381112985,
+              "mean_km": 4.609292404341728
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8758169934640523,
+              "mean_km": 2.5663781330691875
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.834061135371179,
+              "mean_km": 4.912416488122667
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7582417582417582,
+              "mean_km": 10.292063249200668
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/spatial_target/pooled_00b946d32fb7f06f/spatial_s6643/validation_pooled_gate.csv",
+          "prediction_sha256": "0f15b3e28a053fcad437a7dcb36f903bcf51ed0be12d353b4b4b96a6ab506573",
+          "checkpoint": "outputs/spatial_target/pooled_00b946d32fb7f06f/gated_spatial_s6643/model.pth",
+          "checkpoint_sha256": "3126070ecd6b0223fed1d93cbf6baab76adb25bde718215a8adfc119afb7371a",
+          "fraction_over_10km": 0.14745972738537794,
+          "fraction_over_20km": 0.0429574555968608,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.04310293414914914
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.11653219001757334,
+              0.3898446242866416
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "pooled_gate",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.3997405687405388,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.3511239878024043,
+          "mean_km": 3.2443800609879787,
+          "median_km": 1.0530050611529038,
+          "p90_km": 9.07172922317093,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 353,
+              "f1": 0.7614942528735632,
+              "mean_km": 4.272828226635247
+            },
+            "Brooklyn": {
+              "count": 564,
+              "f1": 0.8206896551724138,
+              "mean_km": 3.331528853237281
+            },
+            "Manhattan": {
+              "count": 356,
+              "f1": 0.8873435326842837,
+              "mean_km": 2.0816957289667357
+            },
+            "Queens": {
+              "count": 932,
+              "f1": 0.8787712561711465,
+              "mean_km": 2.808261967352807
+            },
+            "Staten Island": {
+              "count": 167,
+              "f1": 0.838150289017341,
+              "mean_km": 5.6885930200625285
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/spatial_target/pooled_00b946d32fb7f06f/representative_s6644/validation_pooled_gate.csv",
+          "prediction_sha256": "efa1f9ede637a8b6c123c92cd1722b70019ec48b530752f9b598795598a7008d",
+          "checkpoint": "outputs/spatial_target/pooled_00b946d32fb7f06f/gated_representative_s6644/model.pth",
+          "checkpoint_sha256": "32f06b304a6fb4bee7a50e8b7423966d921a067c07cb0d6f796d7b740a308d4b",
+          "fraction_over_10km": 0.09190556492411467,
+          "fraction_over_20km": 0.025295109612141653,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              -0.0023579995444021245,
+              0.03150746635885301
+            ],
+            "mean_error_reduction_km_interval_95": [
+              -0.013099997468899964,
+              0.1750414797714055
+            ],
+            "blocks": 617,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        },
+        {
+          "method": "pooled_gate",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.234966637785722,
+          "median_km": 2.6816810729538956,
+          "p90_km": 12.877202793714982,
+          "borough_metrics": {
+            "Bronx": {
+              "count": 370,
+              "f1": 0.6527196652719666,
+              "mean_km": 7.236764396920118
+            },
+            "Brooklyn": {
+              "count": 601,
+              "f1": 0.7152428810720268,
+              "mean_km": 4.6329995907060955
+            },
+            "Manhattan": {
+              "count": 353,
+              "f1": 0.8688741721854305,
+              "mean_km": 2.620948099777884
+            },
+            "Queens": {
+              "count": 927,
+              "f1": 0.8184818481848185,
+              "mean_km": 4.891404340041423
+            },
+            "Staten Island": {
+              "count": 170,
+              "f1": 0.7597765363128491,
+              "mean_km": 10.307600863320188
+            }
+          },
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "prediction": "outputs/spatial_target/pooled_00b946d32fb7f06f/spatial_s6644/validation_pooled_gate.csv",
+          "prediction_sha256": "3f443c15aa416e2d67f5d3aa1c556e479fe87cfbe9d370b436235fb63cbb5836",
+          "checkpoint": "outputs/spatial_target/pooled_00b946d32fb7f06f/gated_spatial_s6644/model.pth",
+          "checkpoint_sha256": "7d45dd128f425570e8a3ab6fb8381572d47f7226cae8675278c50254b1028d21",
+          "fraction_over_10km": 0.1503510945890128,
+          "fraction_over_20km": 0.04378356051218505,
+          "bootstrap": {
+            "score_gain_interval_95": [
+              0.0,
+              0.04425261563993172
+            ],
+            "mean_error_reduction_km_interval_95": [
+              0.20959219844560298,
+              0.4625951891407018
+            ],
+            "blocks": 159,
+            "replicates": 400,
+            "metric_version": "mean_haversine_5km_v2",
+            "scope": "Paired reused-development block bootstrap; not independent test evidence."
+          }
+        }
+      ],
+      "best_experimental_pointer": "outputs/spatial_target/latest_pooled.json",
+      "blocked_pointer": "outputs/spatial_target/latest_blocked.json",
+      "arbitration_pointer": "outputs/spatial_target/latest_arbitration.json",
+      "artifact_verifications": [
+        "outputs/spatial_target/verification.json",
+        "outputs/spatial_target/blocked_verification.json"
+      ],
+      "inline_tests_passed": 18,
+      "artifact_checks_passed": 590,
+      "completed_fits": 42,
+      "total_phase_fit_seconds": 814.5375053356402,
+      "phase_limit_seconds": 900.0,
+      "blocked_gate_repeat_complete": false,
+      "blocked_rejection_complete": true,
+      "budget_stop_execution": "outputs/spatial_target/notebook_blocked_budget_stop_execution.json",
+      "production_selection_changed": false,
+      "new_submission": false,
+      "test_inference": false,
+      "kaggle_uploaded": false,
+      "new_public_score": null,
+      "notebook_cells": "152-173",
+      "next_proposed_task": "More unique geographically cross-fitted calibration queries using existing caches.",
+      "candidate_coverage_diagnostics": [
+        {
+          "split": "representative",
+          "seed": 6643,
+          "oracle_min_top96_mean_km": 0.2593825637681301,
+          "oracle_min_top96_median_km": 0.0998933265295907,
+          "recall96_within1km": 0.9692242833052277,
+          "oracle_nearest_gallery_mean_km": 0.12562554180483748,
+          "scope": "Uses validation truth only after prediction; not a usable predictor or an interpolated-decoder bound."
+        },
+        {
+          "split": "spatial",
+          "seed": 6643,
+          "oracle_min_top96_mean_km": 0.9338696996023239,
+          "oracle_min_top96_median_km": 0.5815851673458216,
+          "recall96_within1km": 0.7802560925237505,
+          "oracle_nearest_gallery_mean_km": 0.43190370565846903,
+          "scope": "Uses validation truth only after prediction; not a usable predictor or an interpolated-decoder bound."
+        },
+        {
+          "split": "representative",
+          "seed": 6644,
+          "oracle_min_top96_mean_km": 0.26299024153207573,
+          "oracle_min_top96_median_km": 0.09989807229111859,
+          "recall96_within1km": 0.968381112984823,
+          "oracle_nearest_gallery_mean_km": 0.12562554180483748,
+          "scope": "Uses validation truth only after prediction; not a usable predictor or an interpolated-decoder bound."
+        },
+        {
+          "split": "spatial",
+          "seed": 6644,
+          "oracle_min_top96_mean_km": 0.9307667687798008,
+          "oracle_min_top96_median_km": 0.5819927828540734,
+          "recall96_within1km": 0.778603882693102,
+          "oracle_nearest_gallery_mean_km": 0.43190370565846903,
+          "scope": "Uses validation truth only after prediction; not a usable predictor or an interpolated-decoder bound."
+        }
+      ],
+      "summary_report": "outputs/spatial_target/summary.json",
+      "final_disabled_execution": {
+        "file": "outputs/spatial_target/notebook_blocked_verify_execution.json",
+        "code_cells": 66,
+        "inline_tests_passed": 18,
+        "error_cells": [],
+        "elapsed_seconds": 8.828572042053565,
+        "historical_run_all": false
+      }
+    },
+    "geoguessr_evidence_study": {
+      "status": "completed_rejected_no_material_gain",
+      "checked_at": "2026-11-19T12:33:09.311403-05:00",
+      "notebook_cells": [
+        174,
+        184
+      ],
+      "algorithm_references": [
+        {
+          "url": "https://www.wired.com/video/watch/wired-news-and-science-how-a-pro-geoguessr-guesses-in-0-dot-1-seconds",
+          "access": "Transcript read; reasoning/guess explanations analyzed, not video frames"
+        },
+        {
+          "url": "https://www.plonkit.net/beginners-guide",
+          "access": "Indexed practitioner-guide excerpts; full page not readable"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/vision/recognizing-text-in-images?changes=_7",
+          "access": "Official API documentation excerpt; local compilation/request behavior verified"
+        }
+      ],
+      "external_task_data_used": false,
+      "online_geographic_rules_used": false,
+      "input_scope": "Competition training images/labels only, fold-specific galleries",
+      "formal_method": "visual prior -> rare recognized clues -> locality/cross-view corroboration -> bounded candidate refinement -> fallback/error review",
+      "decision": {
+        "decision": "outputs/geoskills/study_fdc320711b51a4fc/decision.json",
+        "sha256": "a062121076138d5f2f08c8af11e2f035fe13e11dce7ce6ec4429dacf8a2f2cd7"
+      },
+      "evidence_config": {
+        "minimum_confidence": 0.3,
+        "overlay_bottom_fraction": 0.1,
+        "min_document_frequency": 2,
+        "max_document_fraction": 0.02,
+        "max_groups_per_location": 64,
+        "max_clues_per_line": 32,
+        "geographic_scale_km": 2.0,
+        "text_neighbors": 32,
+        "likelihood_strength": 2.0,
+        "max_text_mass": 0.75,
+        "single_line_max_mass": 0.35,
+        "cluster_radius_km": 2.0,
+        "minimum_cluster_mass": 0.6,
+        "visual_corroboration_temperature": 0.1,
+        "max_seconds_per_case": 180.0,
+        "tag": "rare_text_multicue_v1"
+      },
+      "ocr_cache": {
+        "progress": "outputs/geoskills/refined_25ef6b68b1f132d5/progress.json",
+        "sha256": "9855006eafc5dfb826d21fda620be3d44a5b95705c0f874a82dcfa60e8c0d1b5"
+      },
+      "ocr_images": 47456,
+      "accurate_refined_images": 3703,
+      "ocr_seconds_including_benchmarks": 617.6758510415675,
+      "ocr_seconds_cap": 1800,
+      "new_fit_seconds": 0,
+      "usable_text_locations": 1379,
+      "total_train_locations": 11864,
+      "perception_provenance": {
+        "provider": "Apple built-in Vision VNRecognizeTextRequest",
+        "request_revision": 3,
+        "policy": "fast all images, accurate replacement for label-free nonoverlay text detections",
+        "language_correction": false,
+        "custom_words": [],
+        "pretraining_permission_source": "User reported all pretrained image encoders allowed; generic OCR perception only, no geographic head/data",
+        "downloaded": false,
+        "independently_hash_addressable_weights": false,
+        "native_environment": "outputs/geoskills/native_environment.json",
+        "peak_memory_measured": false
+      },
+      "records": [
+        {
+          "method": "visual",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.4178362794361312,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.3711272906047174,
+          "mean_km": 3.1443635469764133,
+          "median_km": 0.9765508787736754,
+          "p90_km": 8.782164388419666,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 0,
+          "helped_over_10m": 0,
+          "harmed_over_10m": 0,
+          "fraction_over_10km": 0.0872681281618887,
+          "mean_change_among_changed_km": 0.0,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.5739169999724254
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6643/validation_visual.csv",
+          "prediction_sha256": "6b53641784fc6aee5645582fb8d8196b764974f7e0d95b7f71096f0d11526089"
+        },
+        {
+          "method": "rerank",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.4178372893080545,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.37112841268463215,
+          "mean_km": 3.144357936576839,
+          "median_km": 0.9765508787736754,
+          "p90_km": 8.782164388419666,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 5,
+          "helped_over_10m": 2,
+          "harmed_over_10m": 2,
+          "fraction_over_10km": 0.0872681281618887,
+          "mean_change_among_changed_km": -0.003755154749504941,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.620432332972996
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6643/validation_rerank.csv",
+          "prediction_sha256": "45de50faeb7d6c9038a45e0214f1b7fa1624333a5a37e449b36d9b1e25113daa"
+        },
+        {
+          "method": "rescue",
+          "split": "representative",
+          "seed": 6643,
+          "score": 0.4178372893080545,
+          "borough_macro_f1": 0.8382171789188557,
+          "gps_score": 0.37112841268463215,
+          "mean_km": 3.144357936576839,
+          "median_km": 0.9765508787736754,
+          "p90_km": 8.782164388419666,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 5,
+          "helped_over_10m": 2,
+          "harmed_over_10m": 2,
+          "fraction_over_10km": 0.0872681281618887,
+          "mean_change_among_changed_km": -0.003755154749504941,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.6038070840295404
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6643/validation_rescue.csv",
+          "prediction_sha256": "45de50faeb7d6c9038a45e0214f1b7fa1624333a5a37e449b36d9b1e25113daa"
+        },
+        {
+          "method": "visual",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.212052969397525,
+          "median_km": 2.6496089708528516,
+          "p90_km": 12.855300011857594,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 0,
+          "helped_over_10m": 0,
+          "harmed_over_10m": 0,
+          "fraction_over_10km": 0.14745972738537794,
+          "mean_change_among_changed_km": 0.0,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.6251412080600858
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6643/validation_visual.csv",
+          "prediction_sha256": "5aa97106b1c57a109cdddb4f9fe107b68a8e01e0175a2cfd2746986a956910f0"
+        },
+        {
+          "method": "rerank",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.212067017026885,
+          "median_km": 2.6496089708528516,
+          "p90_km": 12.855300011857594,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 3,
+          "helped_over_10m": 2,
+          "harmed_over_10m": 1,
+          "fraction_over_10km": 0.14745972738537794,
+          "mean_change_among_changed_km": 0.011172434723005923,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.6565270000137389
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6643/validation_rerank.csv",
+          "prediction_sha256": "c0ffd79363f9de27c6b9689c48cb0f734f3e0c6ef4a44d0e820df7ef7bd048ea"
+        },
+        {
+          "method": "rescue",
+          "split": "spatial",
+          "seed": 6643,
+          "score": 0.0772372445757082,
+          "borough_macro_f1": 0.772372445757082,
+          "gps_score": 0.0,
+          "mean_km": 5.212017059546425,
+          "median_km": 2.6496089708528516,
+          "p90_km": 12.855300011857594,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 4,
+          "helped_over_10m": 3,
+          "harmed_over_10m": 1,
+          "fraction_over_10km": 0.14745972738537794,
+          "mean_change_among_changed_km": -0.021857841787205734,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 1,
+            "runtime_seconds": 1.6409253749297932
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6643/validation_rescue.csv",
+          "prediction_sha256": "b0b135552523a3e2cce1ebcc93444ecff311d054f774668390132cd807f53422"
+        },
+        {
+          "method": "visual",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.39974056102569616,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.3511239792303569,
+          "mean_km": 3.244380103848216,
+          "median_km": 1.0530072832090909,
+          "p90_km": 9.071728837836408,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 0,
+          "helped_over_10m": 0,
+          "harmed_over_10m": 0,
+          "fraction_over_10km": 0.09190556492411467,
+          "mean_change_among_changed_km": 0.0,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.546806541038677
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6644/validation_visual.csv",
+          "prediction_sha256": "8f8bc043c50d751e073fe3883d2df80eabe441d9a82cfe56c14cfa6067e54f22"
+        },
+        {
+          "method": "rerank",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.39973291801570104,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.351115486997029,
+          "mean_km": 3.244422565014855,
+          "median_km": 1.0530072832090909,
+          "p90_km": 9.071728837836408,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 5,
+          "helped_over_10m": 1,
+          "harmed_over_10m": 2,
+          "fraction_over_10km": 0.09190556492411467,
+          "mean_change_among_changed_km": 0.02000391384531599,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.637619375018403
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6644/validation_rerank.csv",
+          "prediction_sha256": "0e2708bf365d0c2575fc900bad5f5e3b6958879c18b18a03ab9b382dca65346a"
+        },
+        {
+          "method": "rescue",
+          "split": "representative",
+          "seed": 6644,
+          "score": 0.39973291801570104,
+          "borough_macro_f1": 0.8372897971837496,
+          "gps_score": 0.351115486997029,
+          "mean_km": 3.244422565014855,
+          "median_km": 1.0530072832090909,
+          "p90_km": 9.071728837836408,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 5,
+          "helped_over_10m": 1,
+          "harmed_over_10m": 2,
+          "fraction_over_10km": 0.09190556492411467,
+          "mean_change_among_changed_km": 0.02000391384531599,
+          "coverage": {
+            "gallery_size": 9492,
+            "vocabulary_size": 262,
+            "query_count": 2372,
+            "queries_with_text": 299,
+            "queries_with_matches": 80,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.69078983401414
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/representative_s6644/validation_rescue.csv",
+          "prediction_sha256": "0e2708bf365d0c2575fc900bad5f5e3b6958879c18b18a03ab9b382dca65346a"
+        },
+        {
+          "method": "visual",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.234966475805969,
+          "median_km": 2.6816797161029786,
+          "p90_km": 12.877201547807116,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 0,
+          "helped_over_10m": 0,
+          "harmed_over_10m": 0,
+          "fraction_over_10km": 0.1503510945890128,
+          "mean_change_among_changed_km": 0.0,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.6996058749500662
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6644/validation_visual.csv",
+          "prediction_sha256": "9e7fc91128c2e0bbf7b5596e1ee36686bbbe212f5e312e97d6037235d32449d9"
+        },
+        {
+          "method": "rerank",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.234953043377348,
+          "median_km": 2.6816797161029786,
+          "p90_km": 12.877201547807116,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 4,
+          "helped_over_10m": 2,
+          "harmed_over_10m": 1,
+          "fraction_over_10km": 0.1503510945890128,
+          "mean_change_among_changed_km": -0.011094109896216328,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 0,
+            "runtime_seconds": 1.673917374922894
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6644/validation_rerank.csv",
+          "prediction_sha256": "b193f0f290121d35f100c7fbd5492fc2e0f3d512f4322c1a701abf0359b615bb"
+        },
+        {
+          "method": "rescue",
+          "split": "spatial",
+          "seed": 6644,
+          "score": 0.07630190206054184,
+          "borough_macro_f1": 0.7630190206054184,
+          "gps_score": 0.0,
+          "mean_km": 5.234825144001749,
+          "median_km": 2.6816797161029786,
+          "p90_km": 12.877201547807116,
+          "metric_version": "mean_haversine_5km_v2",
+          "gps_normalizer_km": 5.0,
+          "changed_over_10m": 5,
+          "helped_over_10m": 3,
+          "harmed_over_10m": 1,
+          "fraction_over_10km": 0.1503510945890128,
+          "mean_change_among_changed_km": -0.07080442051188299,
+          "coverage": {
+            "gallery_size": 8716,
+            "vocabulary_size": 227,
+            "query_count": 2421,
+            "queries_with_text": 301,
+            "queries_with_matches": 61,
+            "queries_with_text_mass": 1,
+            "runtime_seconds": 1.6944004589458928
+          },
+          "prediction": "outputs/geoskills/study_fdc320711b51a4fc/spatial_s6644/validation_rescue.csv",
+          "prediction_sha256": "80ea2b9bbc101e9dd7793c4c8a3cb8bed48772b20e9b8a45b08551f2c4b82301"
+        }
+      ],
+      "decisions": {
+        "rerank": {
+          "below5_both": false,
+          "below4_both": false,
+          "no_representative_regression": false,
+          "improved_both_spatial": false,
+          "eligible": false
+        },
+        "rescue": {
+          "below5_both": false,
+          "below4_both": false,
+          "no_representative_regression": false,
+          "improved_both_spatial": true,
+          "eligible": false
+        }
+      },
+      "diagnosis": "outputs/geoskills/study_fdc320711b51a4fc/diagnosis.json",
+      "new_synthetic_tests": 6,
+      "artifact_checks": 173,
+      "validation_sets_replayed": 12,
+      "verification": "outputs/geoskills/verification.json",
+      "final_execution": "outputs/geoskills/notebook_check_execution.json",
+      "selected_production_changed": false,
+      "test_inference": false,
+      "new_submission_csv": false,
+      "new_public_score": null,
+      "limitation": "Sparse/ambiguous written clues; no meaningful gain; reused development folds; native macOS OCR model not independently weight-pinned",
+      "next_single_proposed_task": "Benchmark dense local DINO patch matching; no new extraction started"
+    }
+  },
+  "pretrained_policy": {
+    "scope": "ImageNet-pretrained weights allowed for Q4",
+    "evidence": "User reports TA/instructor confirmation",
+    "exact_user_reply": "Yes—ImageNet-pretrained weights are allowed",
+    "recorded_date": "2026-11-14",
+    "staff_message_independently_inspected": false,
+    "other_pretraining_sources_approved": true,
+    "external_image_or_geospatial_data_allowed": false,
+    "all_pretrained_image_encoders_allowed": true,
+    "additional_scope": "Public pretrained image encoder weights beyond ImageNet are allowed for Q4",
+    "broader_scope_evidence": "User reports course-staff approval in response to a question explicitly listing StreetCLIP, DINOv2/v3, Perception Encoder and SigLIP",
+    "broader_scope_exact_user_reply": "All pretrained image encoders are allowed",
+    "broader_scope_confirmed_date": "2026-11-15",
+    "approval_applies_to_weights_not_pretraining_dataset_downloads": true
+  },
+  "pretrained_backbones": [
+    {
+      "architecture": "resnet18",
+      "weights": "IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "file": "outputs/models/resnet18-f37072fd.pth",
+      "sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "bytes": 46830571,
+      "package": "torchvision==0.26.0",
+      "frozen": true,
+      "source_dataset": "ImageNet-1K",
+      "approval_evidence": "User reports TA/instructor approval recorded in pretrained_policy"
+    },
+    {
+      "architecture": "CLIP ViT-L/14 vision encoder",
+      "weights": "geolocal/StreetCLIP",
+      "revision": "e3561ba2ad9bf14c9efd6b0092607b8497efbfea",
+      "url": "https://huggingface.co/geolocal/StreetCLIP/resolve/e3561ba2ad9bf14c9efd6b0092607b8497efbfea/pytorch_model.bin",
+      "file": "outputs/models/streetclip_e3561ba2ad9b/pytorch_model.bin",
+      "sha256": "cf6dc3802a8bf9301560b1aa0cd1fa983b4139f96a1befc43802e387401fe6c0",
+      "bytes": 1711981793,
+      "package": "transformers==5.23.0",
+      "frozen": true,
+      "license": "CC-BY-NC-4.0",
+      "source_dataset": "Authors report 1.1 million street-level geotagged images; dataset not downloaded",
+      "approval_evidence": "User confirmed all pretrained image encoders allowed; accepted StreetCLIP experiment on 2026-11-16",
+      "features": "vision-only post-layernorm pooled CLS, 1024 dimensions; no tokenizer/text inference",
+      "preprocessing": "Official PIL bicubic 336 short-edge resize/center crop and CLIP RGB normalization",
+      "verification": "Pinned source/config Git blob checks; exact full checkpoint SHA-256; strict vision parameter loading; deterministic position buffer rebuilt and checked.",
+      "recorded_date": "2026-11-16",
+      "runtime_versions": {
+        "transformers": "5.23.0",
+        "huggingface-hub": "1.33.0",
+        "safetensors": "0.8.0",
+        "tokenizers": "0.23.1",
+        "torch": "2.11.0",
+        "torchvision": "0.26.0",
+        "numpy": "2.4.4",
+        "Pillow": "12.2.0"
+      },
+      "feature_cache": {
+        "file": "outputs/features/streetclip_train_23f1be61d2b2b2cd.npy",
+        "sha256": "b9be80acd9d389f34b558321403d9f4d5ef4e54e100f31800d05426f7ae2f2e8",
+        "locations": 11864,
+        "shape": [
+          11864,
+          4,
+          1024
+        ],
+        "dtype": "float16",
+        "complete_for_all_training_data": true,
+        "reused_locations": 6500,
+        "newly_encoded_locations": 5364
+      },
+      "prior_feature_caches": [
+        {
+          "file": "outputs/features/streetclip_train_1d2ae8ae6d357433.npy",
+          "sha256": "f80063c6a2261611e03853a55bf4641843c4307a798ad56d9a08ff176c791811",
+          "locations": 6500,
+          "shape": [
+            6500,
+            4,
+            1024
+          ],
+          "dtype": "float16",
+          "complete_for_declared_subset": true,
+          "complete_for_all_training_data": false
+        }
+      ],
+      "test_feature_cache": {
+        "file": "outputs/features/streetclip_test_f1901b97eac036c7.npy",
+        "sha256": "b6870dc542cdfd23cc701572da74fe5b239dec0088eee90679a539c9bcb39695",
+        "bytes": 64782464,
+        "shape": [
+          7908,
+          4,
+          1024
+        ],
+        "dtype": "float16",
+        "complete": true,
+        "namespace": "test",
+        "metadata": "outputs/features/streetclip_test_f1901b97eac036c7.json",
+        "input_verification": "outputs/streetclip_test_input_audit.json"
+      }
+    },
+    {
+      "model_id": "facebook/dinov2-base",
+      "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "weights_sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "weights_directory": "outputs/models/dinov2_f9e44c814b77",
+      "weights_only_no_external_dataset_download": true,
+      "model_card": "https://huggingface.co/facebook/dinov2-base",
+      "license_reference": "https://github.com/facebookresearch/dinov2/blob/main/LICENSE",
+      "preprocessing": "336 center crop after bicubic shortest-edge384; ImageNet mean/std; documented scaled official recipe",
+      "feature_output": "CLS plus2x2 pooled final patch features per direction",
+      "inference_precision": "float32",
+      "storage_precision": "float16",
+      "benchmark": "outputs/dinov2/benchmark.json",
+      "cpu_mps_cache_parity": "outputs/fusion/precision.json",
+      "train_feature_cache": "outputs/dinov2/features/train_51ac09b98e135c24.npy",
+      "train_feature_sha256": "a28d92f3db2d5205ed1ecc20e398dfc1e34ceba89493ac7affd751dd1346f370",
+      "test_feature_cache": "outputs/dinov2/features/test_78de04b778ab6bd6.npy",
+      "test_feature_sha256": "a82a19cd8de9b15e4b092e76c1ad7e25875abf2300ac19b0878d574b93307234"
+    },
+    {
+      "model_id": "serizba/dinov2-salad-v1.0.0",
+      "weights_url": "https://github.com/serizba/salad/releases/download/v1.0.0/dino_salad.ckpt",
+      "weights_sha256": "6b3f1720954293e83da6966c5cfcfc6713200d7fefadcca76fc51aeb80b3cada",
+      "weights_bytes": 352040378,
+      "upstream_commit": "6aede13a3f6c25750bf7fde10209c06cb73060bb",
+      "pretraining": "Public image encoder/aggregation pretrained on GSV-Cities; weights only, no dataset download.",
+      "license_reference": "https://github.com/serizba/salad/blob/6aede13a3f6c25750bf7fde10209c06cb73060bb/LICENSE",
+      "upstream_source_archive": "outputs/models/salad_v1_6aede13a/upstream_source.json",
+      "implementation": "Inline native PyTorch compatibility model; strict188-key load and original-reference parity.",
+      "image_preprocessing": "Full-image bilinear322x322; ImageNet mean/std; original DINOv2+.1 positional offset.",
+      "encoder_precision": "float16 after measured parity; FP32 transport and reductions",
+      "cache_storage": "float16 global8448 and4 regional768 descriptors per image",
+      "status": "Pilot cached only; not selected; no full data/test extraction."
+    }
+  ],
+  "reference_code_repositories": [
+    {
+      "repository_url": "https://github.com/justgoofingaround/nyc-guessr",
+      "requested_by_user": true,
+      "checked_date": "2026-11-15",
+      "status": "accessible_via_local_git_credentials",
+      "access_results": {
+        "connected_github_repository_api": 404,
+        "connected_github_contents_api": 404,
+        "public_github_page": 404,
+        "public_github_repository_api": 404,
+        "web_reader": "fetch failed/cache miss",
+        "exact_repository_web_search": "no results",
+        "signed_in_browser_fallback": "Unavailable: computer-use surfaces are not enabled in this session"
+      },
+      "commit_sha": "2d38aefe854e56e3be3b9d5c8de6c66228d02753",
+      "license": "No license file found in inspected commit tree; concepts will be independently reimplemented with attribution.",
+      "files_inspected": [
+        "README.md",
+        "CLAUDE.md",
+        "geo_features.py",
+        "geo_heads.py",
+        "scripts/cv_heads.py",
+        "scripts/predict_ens.py",
+        "scripts/predict_test.py",
+        "finetune_streetclip.py",
+        "scripts/build_notebook_v3.py",
+        "scripts/build_colab_nb.py"
+      ],
+      "code_reuse_performed": false,
+      "data_or_model_imported": false,
+      "interpretation": "Initial 404 failures reflected unavailable access routes, not repository nonexistence. Local authenticated Git resolved read access.",
+      "next_requirement": "Adapt attributed concepts with local validation/data/pretraining rules; broader pretrained encoder permission remains separate.",
+      "source_review_file": "outputs/setup/nyc_guessr_reference_source.json",
+      "access_resolution": "User confirmed collaborator status; normal existing Git credential helper read the repository. GitHub app/public endpoints remained unavailable.",
+      "metadata_only_clone": true,
+      "excluded_artifacts": [
+        "submissions/*",
+        "*.ipynb outputs",
+        "datasets",
+        "features",
+        "model weights"
+      ]
+    }
+  ]
+}
